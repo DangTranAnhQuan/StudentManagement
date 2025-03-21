@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSinhVien));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýKhoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,7 +94,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1043, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1043, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -106,8 +107,9 @@
             this.quảnLýMônHọcToolStripMenuItem,
             this.quảnLýĐiểmToolStripMenuItem,
             this.quảnLýTàiKhoảnToolStripMenuItem});
+            this.quảnLýToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýToolStripMenuItem.Image")));
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
             // quảnLýKhoaToolStripMenuItem
@@ -159,20 +161,20 @@
             this.đổiMậtKhẩuToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
-            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.chứcNăngToolStripMenuItem.Text = "Tài khoản";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.thoátToolStripMenuItem.Text = "Thông tin chi tiết";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
@@ -198,7 +200,7 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            this.dtgv_SinhVien.Location = new System.Drawing.Point(0, 6);
+            this.dtgv_SinhVien.Location = new System.Drawing.Point(0, 18);
             this.dtgv_SinhVien.MultiSelect = false;
             this.dtgv_SinhVien.Name = "dtgv_SinhVien";
             this.dtgv_SinhVien.ReadOnly = true;
@@ -206,7 +208,7 @@
             this.dtgv_SinhVien.RowHeadersWidth = 51;
             this.dtgv_SinhVien.RowTemplate.Height = 30;
             this.dtgv_SinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_SinhVien.Size = new System.Drawing.Size(1073, 259);
+            this.dtgv_SinhVien.Size = new System.Drawing.Size(1073, 247);
             this.dtgv_SinhVien.TabIndex = 0;
             this.dtgv_SinhVien.TabStop = false;
             // 
@@ -327,7 +329,7 @@
             this.panel2.Controls.Add(this.txb_ID);
             this.panel2.Controls.Add(this.lbl_ID);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 30);
+            this.panel2.Location = new System.Drawing.Point(0, 28);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1043, 152);
             this.panel2.TabIndex = 2;

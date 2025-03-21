@@ -17,3 +17,4 @@ C:\StudentManagement\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.GUI.
 C:\StudentManagement\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.GUI.fQuanLyDiem.resources
 C:\StudentManagement\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.GUI.fBangDiemSV.resources
 C:\StudentManagement\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.GUI.fThongTinChiTiet.resources
+C:\StudentManagement\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.GUI.fDoiMatKhau.resources

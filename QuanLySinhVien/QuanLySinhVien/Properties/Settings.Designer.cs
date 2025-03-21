@@ -26,5 +26,7 @@ namespace QuanLySinhVien.Properties
                 return defaultInstance;
             }
         }
+
+        public string QLSV { get; internal set; }
     }
 }
