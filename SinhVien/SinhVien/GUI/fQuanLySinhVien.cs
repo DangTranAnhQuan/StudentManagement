@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SinhVien.GUI
 {
-    public partial class QuanLySinhVien : Form
+    public partial class fQuanLySinhVien : Form
     {
-        public QuanLySinhVien(fGiangVien fGiangVien)
+        public fQuanLySinhVien(fGiangVien fGiangVien)
         {
             InitializeComponent();
         }

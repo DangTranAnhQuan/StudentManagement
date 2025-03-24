@@ -1,6 +1,6 @@
 ﻿namespace SinhVien.GUI
 {
-    partial class QuanLySinhVien
+    partial class fQuanLySinhVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLySinhVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQuanLySinhVien));
             this.cbbMonHoc = new System.Windows.Forms.ComboBox();
             this.grpMonHoc = new System.Windows.Forms.GroupBox();
             this.grpLopHoc = new System.Windows.Forms.GroupBox();

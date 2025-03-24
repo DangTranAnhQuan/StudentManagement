@@ -47,4 +47,7 @@ D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.C
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.Up2Date
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.exe
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.pdb
-D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.QuanLySinhVien.resources
+D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fThongTinCaNhan.resources
+D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLySinhVien.resources
+D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLyDiem.resources
+D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTaiKhoan.resources
