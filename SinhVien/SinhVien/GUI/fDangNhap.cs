@@ -27,7 +27,6 @@ namespace QuanLySinhVien
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
-                //this.Close();
             }
             else
             {
@@ -35,7 +34,6 @@ namespace QuanLySinhVien
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
-
             }
         }
 

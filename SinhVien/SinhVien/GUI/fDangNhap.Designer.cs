@@ -167,6 +167,7 @@
             this.cbb_LoaiTaiKhoan.Name = "cbb_LoaiTaiKhoan";
             this.cbb_LoaiTaiKhoan.Size = new System.Drawing.Size(324, 30);
             this.cbb_LoaiTaiKhoan.TabIndex = 9;
+            this.cbb_LoaiTaiKhoan.Text = "Sinh viên";
             this.cbb_LoaiTaiKhoan.SelectedIndexChanged += new System.EventHandler(this.cbb_LoaiTaiKhoan_SelectedIndexChanged);
             // 
             // fDangNhap

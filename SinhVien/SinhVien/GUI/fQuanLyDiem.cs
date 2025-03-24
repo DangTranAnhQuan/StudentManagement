@@ -4,7 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+<<<<<<< HEAD
 using System.Security.Cryptography;
+=======
+>>>>>>> AnThien
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +16,7 @@ namespace SinhVien.GUI
 {
     public partial class fQuanLyDiem : Form
     {
+<<<<<<< HEAD
         public fQuanLyDiem()
         {
             InitializeComponent();
@@ -96,5 +100,11 @@ namespace SinhVien.GUI
                 e.Handled = true;
             }
         }
+=======
+        public fQuanLyDiem(fGiangVien fGiangVien)
+        {
+            InitializeComponent();
+        }
+>>>>>>> AnThien
     }
 }

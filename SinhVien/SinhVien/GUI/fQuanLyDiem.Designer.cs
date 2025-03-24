@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.dgv = new System.Windows.Forms.DataGridView();
             this.grb_ChamDiem = new System.Windows.Forms.GroupBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
@@ -325,11 +326,25 @@
             this.lbl_DiemTBLop.Size = new System.Drawing.Size(149, 22);
             this.lbl_DiemTBLop.TabIndex = 18;
             this.lbl_DiemTBLop.Text = "Điểm TB của Lớp";
+=======
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(211, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Quản lý điểm";
+>>>>>>> AnThien
             // 
             // fQuanLyDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1556, 857);
             this.Controls.Add(this.grb_ChamDiem);
             this.Controls.Add(this.panel1);
@@ -341,11 +356,20 @@
             this.grb_ChamDiem.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Name = "fQuanLyDiem";
+            this.Text = "fQuanLyDiem";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+>>>>>>> AnThien
 
         }
 
         #endregion
 
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.GroupBox grb_ChamDiem;
         private System.Windows.Forms.DateTimePicker dtpDate;
@@ -371,5 +395,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_DiemTBLop;
         private System.Windows.Forms.TextBox txb_DiemTBLop;
+=======
+        private System.Windows.Forms.Label label1;
+>>>>>>> AnThien
     }
 }
