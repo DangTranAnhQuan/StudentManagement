@@ -28,3 +28,5 @@ C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.cspr
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.Up2Date
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.exe
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.pdb
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fGiangVien.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.temp.resources

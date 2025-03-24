@@ -66,6 +66,12 @@
     <Compile Include="GUI\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fGiangVien.Designer.cs">
+      <DependentUpon>fGiangVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fThongTinSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="GUI\fCapNhatThongTinSV.Designer.cs">
       <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\temp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\temp.Designer.cs">
+      <DependentUpon>temp.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong.cs" />
     <Compile Include="Program.cs" />
@@ -93,8 +105,14 @@
       <DependentUpon>fDangNhap.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fGiangVien.resx">
+      <DependentUpon>fGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fThongTinSV.resx">
       <DependentUpon>fThongTinSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\temp.resx">
+      <DependentUpon>temp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
