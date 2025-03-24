@@ -60,12 +60,45 @@
     <Compile Include="DAL\DBKetNoi.Designer.cs">
       <DependentUpon>DBKetNoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CapNhatThongTinGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CapNhatThongTinGV.Designer.cs">
+      <DependentUpon>CapNhatThongTinGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fGiangVien.Designer.cs">
+      <DependentUpon>fGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLyDiem.Designer.cs">
+      <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="GUI\fTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fTaiKhoan.Designer.cs">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fThongTinCaNhan.Designer.cs">
+      <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+>>>>>>> AnThien
     <Compile Include="GUI\fThongTinSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +111,18 @@
     <Compile Include="GUI\fCapNhatThongTinSV.Designer.cs">
       <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fQuanLySinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLySinhVien.Designer.cs">
+      <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\temp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\temp.Designer.cs">
+      <DependentUpon>temp.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +131,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThongTinSV.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\CapNhatThongTinGV.resx">
+      <DependentUpon>CapNhatThongTinGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fCapNhatThongTinSV.resx">
       <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,8 +141,29 @@
       <DependentUpon>fDangNhap.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fGiangVien.resx">
+      <DependentUpon>fGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLyDiem.resx">
+      <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="GUI\fTaiKhoan.resx">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fThongTinCaNhan.resx">
+      <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> AnThien
     <EmbeddedResource Include="GUI\fThongTinSV.resx">
       <DependentUpon>fThongTinSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLySinhVien.resx">
+      <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\temp.resx">
+      <DependentUpon>temp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

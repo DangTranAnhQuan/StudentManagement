@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SinhVien;
+using SinhVien.GUI;
 
 namespace QuanLySinhVien
 {
@@ -20,16 +21,31 @@ namespace QuanLySinhVien
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            fThongTinSV f = new fThongTinSV();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-            //this.Close();
+            if (cbb_LoaiTaiKhoan.SelectedItem.ToString() == "Sinh viên")
+            {
+                fThongTinSV f = new fThongTinSV();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                fGiangVien f = new fGiangVien();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
         }
 
         private void fDangNhap_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void cbb_LoaiTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

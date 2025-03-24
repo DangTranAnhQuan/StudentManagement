@@ -3,44 +3,63 @@
   "WorkspaceRootPath": "C:\\StudentManagement\\StudentManagement\\SinhVien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|c:\\studentmanagement\\studentmanagement\\sinhvien\\sinhvien\\gui\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|c:\\studentmanagement\\studentmanagement\\sinhvien\\sinhvien\\gui\\fquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|c:\\studentmanagement\\studentmanagement\\sinhvien\\sinhvien\\gui\\fquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|c:\\studentmanagement\\studentmanagement\\sinhvien\\sinhvien\\gui\\fgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fquanlysinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fquanlysinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fthongtincanhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fthongtincanhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fquanlysinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fquanlysinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\thongtinsv.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\thongtinsv.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|c:\\studentmanagement\\studentmanagement\\sinhvien\\sinhvien\\gui\\fgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fcapnhatthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|c:\\studentmanagement\\studentmanagement\\sinhvien\\sinhvien\\gui\\fcapnhatthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fcapnhatthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\gui\\fcapnhatthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\fcapnhatthongtinsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+>>>>>>> AnThien
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\thongtinsv.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\thongtinsv.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\dal\\dbketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\dal\\dbketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|C:\\StudentManagement\\StudentManagement\\SinhVien\\sinhvien\\dal\\dbketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\dal\\dbketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,8 +69,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 13,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "fQuanLySinhVien.cs [Design]",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fQuanLySinhVien.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fQuanLySinhVien.cs",
+              "ToolTip": "D:\\WinForm\\Do an\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fQuanLySinhVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:55:24.296Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -90,32 +120,117 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "fDangNhap.cs [Design]",
-              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fDangNhap.cs",
-              "RelativeDocumentMoniker": "SinhVien\\GUI\\fDangNhap.cs",
-              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fDangNhap.cs [Design]*",
-              "RelativeToolTip": "SinhVien\\GUI\\fDangNhap.cs [Design]*",
+<<<<<<< HEAD
+              "DocumentIndex": 2,
+              "Title": "fGiangVien.cs",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fGiangVien.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fGiangVien.cs",
+              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fGiangVien.cs",
+              "RelativeToolTip": "SinhVien\\GUI\\fGiangVien.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T07:02:59.457Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "fDangNhap.cs",
-              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fDangNhap.cs",
-              "RelativeDocumentMoniker": "SinhVien\\GUI\\fDangNhap.cs",
-              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fDangNhap.cs*",
-              "RelativeToolTip": "SinhVien\\GUI\\fDangNhap.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAnwBoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T04:25:41.641Z",
+              "WhenOpened": "2025-03-24T08:51:42.764Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fQuanLyDiem.cs",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fQuanLyDiem.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fQuanLyDiem.cs",
+              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fQuanLyDiem.cs",
+              "RelativeToolTip": "SinhVien\\GUI\\fQuanLyDiem.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAiwDoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:47:17.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fQuanLyDiem.cs [Design]",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fQuanLyDiem.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fQuanLyDiem.cs",
+              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fQuanLyDiem.cs [Design]",
+              "RelativeToolTip": "SinhVien\\GUI\\fQuanLyDiem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:22:50.287Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "fCapNhatThongTinSV.cs [Design]",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fCapNhatThongTinSV.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fCapNhatThongTinSV.cs",
+              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fCapNhatThongTinSV.cs [Design]",
+              "RelativeToolTip": "SinhVien\\GUI\\fCapNhatThongTinSV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:10:51.772Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "temp.cs [Design]",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\temp.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\temp.cs",
+              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\temp.cs [Design]",
+              "RelativeToolTip": "SinhVien\\GUI\\temp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T07:58:24.09Z",
+              "EditorCaption": " [Design]"
+=======
+              "DocumentIndex": 3,
+              "Title": "fThongTinCaNhan.cs [Design]",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fThongTinCaNhan.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fThongTinCaNhan.cs",
+              "ToolTip": "D:\\WinForm\\Do an\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fThongTinCaNhan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T11:18:02.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fGiangVien.cs",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fGiangVien.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fGiangVien.cs",
+              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fGiangVien.cs",
+              "RelativeToolTip": "SinhVien\\GUI\\fGiangVien.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAIA+wGQBAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T10:07:11.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fQuanLySinhVien.cs",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fQuanLySinhVien.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fQuanLySinhVien.cs",
+              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fQuanLySinhVien.cs",
+              "RelativeToolTip": "SinhVien\\GUI\\fQuanLySinhVien.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:41:30.984Z"
+>>>>>>> AnThien
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "fGiangVien.cs [Design]",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fGiangVien.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fGiangVien.cs",
+              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fGiangVien.cs [Design]",
+              "RelativeToolTip": "SinhVien\\GUI\\fGiangVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T07:40:47.297Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+<<<<<<< HEAD
               "Title": "fThongTinSV.cs [Design]",
               "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fThongTinSV.cs",
               "RelativeDocumentMoniker": "SinhVien\\GUI\\fThongTinSV.cs",
@@ -127,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "fThongTinSV.cs",
               "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fThongTinSV.cs",
               "RelativeDocumentMoniker": "SinhVien\\GUI\\fThongTinSV.cs",
@@ -137,47 +252,43 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T05:04:27.764Z",
               "EditorCaption": ""
+=======
+              "Title": "fDangNhap.cs [Design]",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fDangNhap.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\fDangNhap.cs",
+              "ToolTip": "D:\\WinForm\\Do an\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fDangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:48:07.718Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "temp.cs [Design]",
+              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\temp.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\temp.cs",
+              "ToolTip": "D:\\WinForm\\Do an\\StudentManagement\\SinhVien\\SinhVien\\GUI\\temp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:51:12.394Z"
+>>>>>>> AnThien
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ThongTinSV.dbml",
               "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\ThongTinSV.dbml",
               "RelativeDocumentMoniker": "SinhVien\\ThongTinSV.dbml",
               "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\ThongTinSV.dbml",
               "RelativeToolTip": "SinhVien\\ThongTinSV.dbml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
-              "WhenOpened": "2025-03-24T03:20:46.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T03:20:46.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "fCapNhatThongTinSV.cs [Design]",
-              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fCapNhatThongTinSV.cs",
-              "RelativeDocumentMoniker": "SinhVien\\GUI\\fCapNhatThongTinSV.cs",
-              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fCapNhatThongTinSV.cs [Design]",
-              "RelativeToolTip": "SinhVien\\GUI\\fCapNhatThongTinSV.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T02:26:57.046Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "fCapNhatThongTinSV.cs",
-              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fCapNhatThongTinSV.cs",
-              "RelativeDocumentMoniker": "SinhVien\\GUI\\fCapNhatThongTinSV.cs",
-              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\GUI\\fCapNhatThongTinSV.cs",
-              "RelativeToolTip": "SinhVien\\GUI\\fCapNhatThongTinSV.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T04:30:02.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+<<<<<<< HEAD
+              "DocumentIndex": 9,
+=======
+              "DocumentIndex": 8,
+>>>>>>> AnThien
               "Title": "HeThong.cs",
               "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\HeThong.cs",
               "RelativeDocumentMoniker": "SinhVien\\HeThong.cs",
@@ -186,29 +297,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T03:32:46.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DBKetNoi.cs",
-              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\DAL\\DBKetNoi.cs",
-              "RelativeDocumentMoniker": "SinhVien\\DAL\\DBKetNoi.cs",
-              "ToolTip": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\DAL\\DBKetNoi.cs",
-              "RelativeToolTip": "SinhVien\\DAL\\DBKetNoi.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAADwvzUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T09:33:59.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DBKetNoi.cs [Design]",
-              "DocumentMoniker": "C:\\StudentManagement\\StudentManagement\\SinhVien\\SinhVien\\DAL\\DBKetNoi.cs",
-              "RelativeDocumentMoniker": "SinhVien\\DAL\\DBKetNoi.cs",
-              "ToolTip": "C:\\Users\\ducdu\\OneDrive\\M\u00E1y t\u00EDnh\\C#\\ThongTinSV\\SinhVien\\SinhVien\\DAL\\DBKetNoi.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\Users\\ducdu\\OneDrive\\M\u00E1y t\u00EDnh\\C#\\ThongTinSV\\SinhVien\\SinhVien\\DAL\\DBKetNoi.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T02:46:34.035Z"
             }
           ]
         }
