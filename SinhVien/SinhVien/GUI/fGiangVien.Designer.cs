@@ -38,7 +38,7 @@
             this.btnThongTinCaNhan = new System.Windows.Forms.Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_QuanLyDiem = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -253,24 +253,25 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_QuanLyDiem
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumBlue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 546);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(289, 62);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Quản lý điểm";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_QuanLyDiem.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btn_QuanLyDiem.FlatAppearance.BorderSize = 0;
+            this.btn_QuanLyDiem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumBlue;
+            this.btn_QuanLyDiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
+            this.btn_QuanLyDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QuanLyDiem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QuanLyDiem.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanLyDiem.Location = new System.Drawing.Point(3, 546);
+            this.btn_QuanLyDiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_QuanLyDiem.Name = "btn_QuanLyDiem";
+            this.btn_QuanLyDiem.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btn_QuanLyDiem.Size = new System.Drawing.Size(289, 62);
+            this.btn_QuanLyDiem.TabIndex = 3;
+            this.btn_QuanLyDiem.Text = "Quản lý điểm";
+            this.btn_QuanLyDiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QuanLyDiem.UseVisualStyleBackColor = true;
+            this.btn_QuanLyDiem.Click += new System.EventHandler(this.btn_QuanLyDiem_Click);
             // 
             // button3
             // 
@@ -310,7 +311,7 @@
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btn_QuanLyDiem);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -938,6 +939,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "fGiangVien";
             this.Text = "fGiangVien";
+            this.Load += new System.EventHandler(this.fGiangVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -968,7 +970,7 @@
         private System.Windows.Forms.Button btnThongTinCaNhan;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_QuanLyDiem;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;

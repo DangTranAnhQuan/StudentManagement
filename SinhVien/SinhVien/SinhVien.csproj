@@ -60,6 +60,12 @@
     <Compile Include="DAL\DBKetNoi.Designer.cs">
       <DependentUpon>DBKetNoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CapNhatThongTinGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CapNhatThongTinGV.Designer.cs">
+      <DependentUpon>CapNhatThongTinGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     </Compile>
     <Compile Include="GUI\fGiangVien.Designer.cs">
       <DependentUpon>fGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLyDiem.Designer.cs">
+      <DependentUpon>fQuanLyDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fThongTinSV.cs">
       <SubType>Form</SubType>
@@ -98,6 +110,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThongTinSV.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\CapNhatThongTinGV.resx">
+      <DependentUpon>CapNhatThongTinGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fCapNhatThongTinSV.resx">
       <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fGiangVien.resx">
       <DependentUpon>fGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLyDiem.resx">
+      <DependentUpon>fQuanLyDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fThongTinSV.resx">
       <DependentUpon>fThongTinSV.cs</DependentUpon>

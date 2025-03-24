@@ -16,5 +16,20 @@ namespace SinhVien.GUI
         {
             InitializeComponent();
         }
+
+        private void fGiangVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_QuanLyDiem_Click(object sender, EventArgs e)
+        {
+            if (btn_QuanLyDiem.Enabled == true)
+            {
+                fQuanLyDiem f = new fQuanLyDiem();
+                f.ShowDialog();
+                
+            }
+        }
     }
 }

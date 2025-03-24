@@ -30,3 +30,5 @@ C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.exe
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.pdb
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fGiangVien.resources
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.temp.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.CapNhatThongTinGV.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLyDiem.resources
