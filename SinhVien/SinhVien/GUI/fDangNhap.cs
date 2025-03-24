@@ -24,12 +24,12 @@ namespace QuanLySinhVien
             this.Hide();
             f.ShowDialog();
             this.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void fDangNhap_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

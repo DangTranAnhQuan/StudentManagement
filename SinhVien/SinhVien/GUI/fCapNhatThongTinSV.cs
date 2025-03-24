@@ -28,7 +28,7 @@ namespace SinhVien
         }
         private void fCapNhatThongTinSV_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtMaSV_TextChanged(object sender, EventArgs e)

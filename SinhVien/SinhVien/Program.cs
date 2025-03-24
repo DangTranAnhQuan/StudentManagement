@@ -17,7 +17,7 @@ namespace SinhVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fThongTinSV());
+            Application.Run(new fDangNhap());
         }
     }
 }
