@@ -84,6 +84,12 @@
     <Compile Include="GUI\fCapNhatThongTinSV.Designer.cs">
       <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QuanLySinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLySinhVien.Designer.cs">
+      <DependentUpon>QuanLySinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\temp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fThongTinSV.resx">
       <DependentUpon>fThongTinSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLySinhVien.resx">
+      <DependentUpon>QuanLySinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\temp.resx">
       <DependentUpon>temp.cs</DependentUpon>
