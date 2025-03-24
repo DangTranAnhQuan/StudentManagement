@@ -16,5 +16,14 @@ namespace SinhVien.GUI
         {
             InitializeComponent();
         }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Select Photo(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+
+            if (opf.ShowDialog() == DialogResult.OK)
+                pbAnhDaiDien.Image = Image.FromFile(opf.FileName);
+        }
     }
 }

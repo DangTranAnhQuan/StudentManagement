@@ -51,3 +51,7 @@ D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTho
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLySinhVien.resources
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLyDiem.resources
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTaiKhoan.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLyDiem.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTaiKhoan.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fThongTinCaNhan.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLySinhVien.resources

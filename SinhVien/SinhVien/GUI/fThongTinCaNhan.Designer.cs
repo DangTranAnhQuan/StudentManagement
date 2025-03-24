@@ -347,6 +347,7 @@
             this.btnUpload.TabIndex = 26;
             this.btnUpload.Text = "   Upload";
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // pbAnhDaiDien
             // 

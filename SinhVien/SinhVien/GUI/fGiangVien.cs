@@ -317,7 +317,11 @@ namespace SinhVien.GUI
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Select Photo(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
 
+            if (opf.ShowDialog() == DialogResult.OK)
+                guna2CirclePictureBox1.Image = Image.FromFile(opf.FileName);
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)

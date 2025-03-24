@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace SinhVien
 {
@@ -35,6 +36,23 @@ namespace SinhVien
         {
             OpenCapNhatThongTinSV(new fCapNhatThongTinSV(this));
              
+        }
+
+        private void btnUpload_Click(object sender, System.EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Select Photo(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                pbAnhDaiDien.Image = Image.FromFile(opf.FileName);
+                guna2CirclePictureBox2.Image = pbAnhDaiDien.Image;
+            }
+        }
+
+        private void guna2CirclePictureBox2_Click(object sender, System.EventArgs e)
+        {
+            
         }
     }
 }
