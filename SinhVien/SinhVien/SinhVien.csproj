@@ -42,6 +42,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,11 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DAL_TaiKhoan.cs" />
-    <Compile Include="DAL\DBKetNoi.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Database.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DAL\DBKetNoi.Designer.cs">
-      <DependentUpon>DBKetNoi.cs</DependentUpon>
+    <Compile Include="GUI\GiangVien\fCapNhatThongTinGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\fCapNhatThongTinGV.Designer.cs">
+      <DependentUpon>fCapNhatThongTinGV.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fDangNhap.cs">
       <SubType>Form</SubType>
@@ -66,28 +72,58 @@
     <Compile Include="GUI\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fGiangVien.cs">
+    <Compile Include="GUI\GiangVien\fGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fGiangVien.Designer.cs">
+    <Compile Include="GUI\GiangVien\fGiangVien.Designer.cs">
       <DependentUpon>fGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fQuanLyDiem.cs">
+    <Compile Include="GUI\GiangVien\fQuanLyDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fQuanLyDiem.Designer.cs">
+    <Compile Include="GUI\GiangVien\fQuanLyDiem.Designer.cs">
       <DependentUpon>fQuanLyDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fTaiKhoan.cs">
+    <Compile Include="GUI\Quan Tri Vien\fQuanLyGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fTaiKhoan.Designer.cs">
+    <Compile Include="GUI\Quan Tri Vien\fQuanLyGiangVien.Designer.cs">
+      <DependentUpon>fQuanLyGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fQuanLyPhongHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fQuanLyPhongHoc.Designer.cs">
+      <DependentUpon>fQuanLyPhongHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fQuanLyMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fQuanLyMonHoc.Designer.cs">
+      <DependentUpon>fQuanLyMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fQuanLySV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fQuanLySV.Designer.cs">
+      <DependentUpon>fQuanLySV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fQuanTriVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fQuanTriVien.Designer.cs">
+      <DependentUpon>fQuanTriVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiangVien\fTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\fTaiKhoan.Designer.cs">
       <DependentUpon>fTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fThongTinCaNhan.cs">
+    <Compile Include="GUI\GiangVien\fThongTinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fThongTinCaNhan.Designer.cs">
+    <Compile Include="GUI\GiangVien\fThongTinCaNhan.Designer.cs">
       <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fThongTinSV.cs">
@@ -102,11 +138,17 @@
     <Compile Include="GUI\fCapNhatThongTinSV.Designer.cs">
       <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fQuanLySinhVien.cs">
+    <Compile Include="GUI\GiangVien\fQuanLySinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fQuanLySinhVien.Designer.cs">
+    <Compile Include="GUI\GiangVien\fQuanLySinhVien.Designer.cs">
       <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fThongTinChung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quan Tri Vien\fThongTinChung.Designer.cs">
+      <DependentUpon>fThongTinChung.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\temp.cs">
       <SubType>Form</SubType>
@@ -117,11 +159,9 @@
     <Compile Include="HeThong.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThongTinSV.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ThongTinSV.dbml</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="GUI\GiangVien\fCapNhatThongTinGV.resx">
+      <DependentUpon>fCapNhatThongTinGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fCapNhatThongTinSV.resx">
       <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,23 +169,41 @@
       <DependentUpon>fDangNhap.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fGiangVien.resx">
+    <EmbeddedResource Include="GUI\GiangVien\fGiangVien.resx">
       <DependentUpon>fGiangVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fQuanLyDiem.resx">
+    <EmbeddedResource Include="GUI\GiangVien\fQuanLyDiem.resx">
       <DependentUpon>fQuanLyDiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fTaiKhoan.resx">
+    <EmbeddedResource Include="GUI\Quan Tri Vien\fQuanLyGiangVien.resx">
+      <DependentUpon>fQuanLyGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quan Tri Vien\fQuanLyPhongHoc.resx">
+      <DependentUpon>fQuanLyPhongHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quan Tri Vien\fQuanLyMonHoc.resx">
+      <DependentUpon>fQuanLyMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quan Tri Vien\fQuanLySV.resx">
+      <DependentUpon>fQuanLySV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quan Tri Vien\fQuanTriVien.resx">
+      <DependentUpon>fQuanTriVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangVien\fTaiKhoan.resx">
       <DependentUpon>fTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fThongTinCaNhan.resx">
+    <EmbeddedResource Include="GUI\GiangVien\fThongTinCaNhan.resx">
       <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fThongTinSV.resx">
       <DependentUpon>fThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fQuanLySinhVien.resx">
+    <EmbeddedResource Include="GUI\GiangVien\fQuanLySinhVien.resx">
       <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Quan Tri Vien\fThongTinChung.resx">
+      <DependentUpon>fThongTinChung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\temp.resx">
       <DependentUpon>temp.cs</DependentUpon>
@@ -159,6 +217,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Database.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Database.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database.dbml.layout">
+      <DependentUpon>Database.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -169,14 +235,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ThongTinSV.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>ThongTinSV.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ThongTinSV.dbml.layout">
-      <DependentUpon>ThongTinSV.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

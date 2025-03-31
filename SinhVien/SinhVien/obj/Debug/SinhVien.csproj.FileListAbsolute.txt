@@ -51,3 +51,32 @@ D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTho
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLySinhVien.resources
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLyDiem.resources
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTaiKhoan.resources
+D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fCapNhatThongTinGV.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\bin\Debug\GUI\fDangNhap.resx
+D:\WinForm\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.exe.config
+D:\WinForm\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.exe
+D:\WinForm\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.pdb
+D:\WinForm\StudentManagement\SinhVien\SinhVien\bin\Debug\Guna.UI2.dll
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.AssemblyReference.cache
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fCapNhatThongTinGV.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fCapNhatThongTinSV.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\QuanLySinhVien.fDangNhap.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fGiangVien.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLyDiem.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTaiKhoan.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fThongTinCaNhan.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fThongTinSV.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLySinhVien.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.temp.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.Properties.Resources.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.GenerateResource.cache
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.CoreCompileInputs.cache
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.Up2Date
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.exe
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.pdb
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanTriVien.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fThongTinChung.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyGiangVien.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLySV.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyMonHoc.resources
+D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyPhongHoc.resources

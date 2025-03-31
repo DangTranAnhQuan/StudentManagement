@@ -28,9 +28,16 @@ namespace QuanLySinhVien
                 f.ShowDialog();
                 this.Show();
             }
-            else
+            else if (cbb_LoaiTaiKhoan.SelectedItem.ToString() == "Giảng viên")
             {
                 fGiangVien f = new fGiangVien();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                fQuanTriVien f = new fQuanTriVien();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
