@@ -8,6 +8,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SinhVien.GUI.Quan_Tri_Vien.fQuanLyGiangVien;
 
 namespace SinhVien.GUI.Quan_Tri_Vien
 {
@@ -44,19 +45,22 @@ namespace SinhVien.GUI.Quan_Tri_Vien
 
         private void LoadDanhSachSinhVien()
         {
-            List<SV> dssv = db.Thong_Tin_Sinh_Viens.Select(sv => new SV
-            {   
-                MaSV = sv.MaSV, 
-                HoTen = sv.HoTen, 
-                NgaySinh = sv.NgaySinh, 
-                NoiSinh = sv.NoiSinh, 
-                GioiTinh = sv.GioiTinh, 
-                CCCD = sv.CCCD, 
-                DanToc = sv.DanToc, 
-                LopSV = sv.LopSV, 
-                MatKhau = sv.MatKhau, 
-                //Photo = sv.Photo
-            }).ToList();
+            List<SV> dssv = (from sv in db.Thong_Tin_Sinh_Viens
+                             join tk in db.TaiKhoans on sv.MaSV equals tk.MaNguoiDung
+                             select new SV
+                            {   
+                                MaSV = sv.MaSV, 
+                                HoTen = sv.HoTen, 
+                                NgaySinh = sv.NgaySinh, 
+                                NoiSinh = sv.NoiSinh, 
+                                GioiTinh = sv.GioiTinh, 
+                                CCCD = sv.CCCD, 
+                                DanToc = sv.DanToc, 
+                                LopSV = sv.LopSV,
+                                MatKhau = tk.MatKhau, 
+                                //Photo = sv.Photo
+                            }).ToList();
+
             dtgvDanhSachSinhVien.DataSource = dssv;
             RenameColumn(dtgvDanhSachSinhVien);
         }
@@ -129,19 +133,22 @@ namespace SinhVien.GUI.Quan_Tri_Vien
                 return;
             }
 
-            List<SV> dssv = db.Thong_Tin_Sinh_Viens.Where(sv => sv.MaSV.ToLower().Contains(Ma.ToLower())).Select(sv => new SV
-            {
-                MaSV = sv.MaSV,
-                HoTen = sv.HoTen,
-                NgaySinh = sv.NgaySinh,
-                NoiSinh = sv.NoiSinh,
-                GioiTinh = sv.GioiTinh,
-                CCCD = sv.CCCD,
-                DanToc = sv.DanToc,
-                LopSV = sv.LopSV,
-                MatKhau = sv.MatKhau,
-                //Photo = sv.Photo
-            }).ToList();
+            List<SV> dssv = (from sv in db.Thong_Tin_Sinh_Viens
+                             join tk in db.TaiKhoans on sv.MaSV equals tk.MaNguoiDung
+                             where sv.MaSV.ToLower().Contains(Ma.ToLower())
+                             select new SV
+                             {
+                                 MaSV = sv.MaSV,
+                                 HoTen = sv.HoTen,
+                                 NgaySinh = sv.NgaySinh,
+                                 NoiSinh = sv.NoiSinh,
+                                 GioiTinh = sv.GioiTinh,
+                                 CCCD = sv.CCCD,
+                                 DanToc = sv.DanToc,
+                                 LopSV = sv.LopSV,
+                                 MatKhau = tk.MatKhau,
+                                 // Photo = sv.Photo
+                             }).ToList();
 
             if (dssv.Count == 0)
             {
@@ -194,7 +201,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin sinh viên này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes) 
             {
-                if (txtMSSV.Text == "" || txtHoTen.Text == "" || dtpNgaySinh.Text == "" || txtNoiSinh.Text == "" || txtCCCD.Text == "" || cbbDanToc.SelectedIndex == 0 || txtLopSinhVien.Text == "" || txtMatKhau.Text == "" || (!rdbNam.Checked && !rdbNu.Checked))
+                if (txtMSSV.Text == "" || txtHoTen.Text == "" || dtpNgaySinh.Text == "" || txtNoiSinh.Text == "" || txtCCCD.Text == "" || cbbDanToc.SelectedIndex == 0 || txtMatKhau.Text == "" || txtLopSinhVien.Text == "" || (!rdbNam.Checked && !rdbNu.Checked))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -202,13 +209,15 @@ namespace SinhVien.GUI.Quan_Tri_Vien
 
                 string Ma = txtMSSV.Text;
                 Thong_Tin_Sinh_Vien sv = db.Thong_Tin_Sinh_Viens.FirstOrDefault(s => s.MaSV == Ma);
+                TaiKhoan tk = db.TaiKhoans.FirstOrDefault(t => t.MaNguoiDung == Ma);
                 sv.HoTen = txtHoTen.Text;
                 sv.NgaySinh = dtpNgaySinh.Value;
                 sv.NoiSinh = txtNoiSinh.Text;
                 sv.CCCD = txtCCCD.Text;
                 sv.DanToc = cbbDanToc.Text;
                 sv.LopSV = txtLopSinhVien.Text;
-                sv.MatKhau = txtMatKhau.Text;
+                tk.MatKhau = txtMatKhau.Text;
+                
                 if (rdbNam.Checked)
                 {
                     sv.GioiTinh = "Nam";
@@ -217,7 +226,9 @@ namespace SinhVien.GUI.Quan_Tri_Vien
                 {
                     sv.GioiTinh = "Nữ";
                 }
+                
                 db.SubmitChanges();
+
                 MessageBox.Show("Sửa thông tin sinh viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDanhSachSinhVien();
                 ClearTextBox();
@@ -226,7 +237,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMSSV.Text == "" || txtHoTen.Text == "" || dtpNgaySinh.Text == "" || txtNoiSinh.Text == "" || txtCCCD.Text == "" || cbbDanToc.SelectedIndex == 0 || txtLopSinhVien.Text == "" || txtMatKhau.Text == "" || (!rdbNam.Checked && !rdbNu.Checked))
+            if (txtMSSV.Text == "" || txtHoTen.Text == "" || dtpNgaySinh.Text == "" || txtNoiSinh.Text == "" || txtCCCD.Text == "" || cbbDanToc.SelectedIndex == 0 || txtLopSinhVien.Text == "" || (!rdbNam.Checked && !rdbNu.Checked))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -246,7 +257,6 @@ namespace SinhVien.GUI.Quan_Tri_Vien
             sv.CCCD = txtCCCD.Text;
             sv.DanToc = cbbDanToc.Text;
             sv.LopSV = txtLopSinhVien.Text;
-            sv.MatKhau = txtMatKhau.Text;
             if (rdbNam.Checked)
             {
                 sv.GioiTinh = "Nam";
@@ -255,8 +265,16 @@ namespace SinhVien.GUI.Quan_Tri_Vien
             {
                 sv.GioiTinh = "Nữ";
             }
+            
             db.Thong_Tin_Sinh_Viens.InsertOnSubmit(sv);
             db.SubmitChanges();
+
+            if (txtMatKhau.Text != "")
+            {
+                TaiKhoan tk = db.TaiKhoans.FirstOrDefault(t => t.MaNguoiDung == sv.MaSV);
+                tk.MatKhau = txtMatKhau.Text;
+                db.SubmitChanges();
+            }
 
             MessageBox.Show("Thêm sinh viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtMSSV.ReadOnly = true;

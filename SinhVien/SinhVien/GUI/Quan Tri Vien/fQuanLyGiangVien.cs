@@ -23,7 +23,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
 
         public class GV
         {
-            public int MaGV { get; set; }
+            public string MaGV { get; set; }
             public string HoTen { get; set; }
             public string GioiTinh { get; set; }
             public DateTime NgaySinh { get; set; }
@@ -58,6 +58,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
         {
             List<GV> dsgv = (from gv in db.GiangViens
                         join khoa in db.Khoas on gv.MaKhoa equals khoa.MaKhoa
+                        join tk in db.TaiKhoans on gv.MaGV equals tk.MaNguoiDung
                         select new GV
                         { 
                             MaGV = gv.MaGV, 
@@ -67,7 +68,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
                             TenKhoa = khoa.TenKhoa, 
                             DienThoai = gv.DienThoai, 
                             Email = gv.Email, 
-                            MatKhau = gv.MatKhau,
+                            MatKhau = tk.MatKhau,
                             CCCD = gv.CCCD,
                             DanToc = gv.DanToc,
                             NoiSinh = gv.NoiSinh
@@ -121,6 +122,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
 
             List<GV> dsgv = (from gv in db.GiangViens
                         join khoa in db.Khoas on gv.MaKhoa equals khoa.MaKhoa
+                        join tk in db.TaiKhoans on gv.MaGV equals tk.MaNguoiDung
                         where gv.MaGV.ToString().ToLower().Contains(Ma.ToLower())
                         select new GV
                         { 
@@ -131,7 +133,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
                             TenKhoa = khoa.TenKhoa, 
                             DienThoai = gv.DienThoai, 
                             Email = gv.Email, 
-                            MatKhau = gv.MatKhau,
+                            MatKhau = tk.MatKhau,
                             CCCD = gv.CCCD,
                             DanToc = gv.DanToc,
                             NoiSinh = gv.NoiSinh
@@ -174,7 +176,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa giảng viên này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                int MaGV = Convert.ToInt32(txtMaGV.Text);
+                string MaGV = txtMaGV.Text;
                 GiangVien gv = db.GiangViens.FirstOrDefault(g => g.MaGV == MaGV);
                 db.GiangViens.DeleteOnSubmit(gv);
                 db.SubmitChanges();
@@ -195,17 +197,18 @@ namespace SinhVien.GUI.Quan_Tri_Vien
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin giảng viên này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (txtMaGV.Text == "" || txtHoTen.Text == "" || txtEmail.Text == "" || txtSdt.Text == "" || txtMatKhau.Text == "" || cbbKhoa.SelectedIndex == 0 || txtCCCD.Text == "" || cbbDanToc.SelectedIndex == 0 || txtNoiSinh.Text == "" || (!rdbNam.Checked && !rdbNu.Checked))
+                if (txtMaGV.Text == "" || txtHoTen.Text == "" || txtEmail.Text == "" || txtSdt.Text == "" || cbbKhoa.SelectedIndex == 0 || txtMatKhau.Text == "" || txtCCCD.Text == "" || cbbDanToc.SelectedIndex == 0 || txtNoiSinh.Text == "" || (!rdbNam.Checked && !rdbNu.Checked))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                GiangVien gv = db.GiangViens.FirstOrDefault(g => g.MaGV == Convert.ToInt32(txtMaGV.Text));
+                GiangVien gv = db.GiangViens.FirstOrDefault(g => g.MaGV == txtMaGV.Text);
+                TaiKhoan tk = db.TaiKhoans.FirstOrDefault(x => x.MaNguoiDung == txtMaGV.Text);
                 gv.HoTen = txtHoTen.Text;
                 gv.Email = txtEmail.Text;
                 gv.DienThoai = txtSdt.Text;
-                gv.MatKhau = txtMatKhau.Text;
+                tk.MatKhau = txtMatKhau.Text;
                 gv.MaKhoa = cbbKhoa.SelectedValue.ToString();
                 gv.CCCD = txtCCCD.Text;
                 gv.DanToc = cbbDanToc.Text;
@@ -228,24 +231,23 @@ namespace SinhVien.GUI.Quan_Tri_Vien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMaGV.Text == "" || txtHoTen.Text == "" || txtEmail.Text == "" || txtSdt.Text == "" || txtMatKhau.Text == "" || cbbKhoa.SelectedIndex == 0 || txtCCCD.Text == "" || cbbDanToc.SelectedIndex == 0 || txtNoiSinh.Text == "" || (!rdbNam.Checked && !rdbNu.Checked))
+            if (txtMaGV.Text == "" || txtHoTen.Text == "" || txtEmail.Text == "" || txtSdt.Text == "" || cbbKhoa.SelectedIndex == 0 || txtCCCD.Text == "" || cbbDanToc.SelectedIndex == 0 || txtNoiSinh.Text == "" || (!rdbNam.Checked && !rdbNu.Checked))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (CheckMaGV(Convert.ToInt32(txtMaGV.Text)))
+            if (CheckMaGV(txtMaGV.Text))
             {
                 MessageBox.Show("Mã giảng viên đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             GiangVien gv = new GiangVien();
-            gv.MaGV = Convert.ToInt32(txtMaGV.Text);
+            gv.MaGV = txtMaGV.Text ;
             gv.HoTen = txtHoTen.Text;
             gv.Email = txtEmail.Text;
             gv.DienThoai = txtSdt.Text;
-            gv.MatKhau = txtMatKhau.Text;
             gv.MaKhoa = cbbKhoa.SelectedValue.ToString();
             gv.CCCD = txtCCCD.Text;
             gv.DanToc = cbbDanToc.Text;
@@ -262,15 +264,21 @@ namespace SinhVien.GUI.Quan_Tri_Vien
 
             db.GiangViens.InsertOnSubmit(gv);
             db.SubmitChanges();
+            if (txtMatKhau.Text != "")
+            {
+                TaiKhoan tk = db.TaiKhoans.FirstOrDefault(x => x.MaNguoiDung == gv.MaGV);
+                tk.MatKhau = txtMatKhau.Text;
+                db.SubmitChanges();
+            }
+            
             MessageBox.Show("Thêm giảng viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtMaGV.ReadOnly = true;
             LoadDanhSachGiangVien();
             ClearTextBox();
             EnabledButton();
-
         }
 
-        private bool CheckMaGV(int v)
+        private bool CheckMaGV(string v)
         {
             GiangVien check = db.GiangViens.FirstOrDefault(g => g.MaGV == v);
             if (check != null)

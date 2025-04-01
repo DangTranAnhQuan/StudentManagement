@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\WinForm\\StudentManagement\\SinhVien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|d:\\winform\\studentmanagement\\sinhvien\\sinhvien\\gui\\quan tri vien\\fquanlygiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\quan tri vien\\fquanlygiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|D:\\WinForm\\StudentManagement\\SinhVien\\sinhvien\\gui\\quan tri vien\\fquanlysv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\quan tri vien\\fquanlysv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|D:\\WinForm\\StudentManagement\\SinhVien\\sinhvien\\gui\\quan tri vien\\fquanlygiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\quan tri vien\\fquanlygiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|d:\\winform\\studentmanagement\\sinhvien\\sinhvien\\gui\\quan tri vien\\fquantrivien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\quan tri vien\\fquantrivien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|D:\\WinForm\\StudentManagement\\SinhVien\\sinhvien\\gui\\quan tri vien\\fquanlysv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\quan tri vien\\fquanlysv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|D:\\WinForm\\StudentManagement\\SinhVien\\sinhvien\\gui\\quan tri vien\\fquanlymonhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\quan tri vien\\fquanlymonhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|D:\\WinForm\\StudentManagement\\SinhVien\\sinhvien\\gui\\quan tri vien\\fquanlyphonghoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\quan tri vien\\fquanlyphonghoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|D:\\WinForm\\StudentManagement\\SinhVien\\sinhvien\\database.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
       "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\database.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|D:\\WinForm\\StudentManagement\\SinhVien\\sinhvien\\gui\\quan tri vien\\fquanlymonhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04DE5620-5FEE-4E5B-BCE0-76EB4A07D83F}|SinhVien\\SinhVien.csproj|solutionrelative:sinhvien\\gui\\quan tri vien\\fquanlymonhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,52 +34,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "fQuanLyGiangVien.cs [Design]",
-              "DocumentMoniker": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyGiangVien.cs",
-              "RelativeDocumentMoniker": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyGiangVien.cs",
-              "ToolTip": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyGiangVien.cs [Design]",
-              "RelativeToolTip": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyGiangVien.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "fQuanTriVien.cs [Design]",
+              "DocumentMoniker": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanTriVien.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\Quan Tri Vien\\fQuanTriVien.cs",
+              "ToolTip": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanTriVien.cs [Design]",
+              "RelativeToolTip": "SinhVien\\GUI\\Quan Tri Vien\\fQuanTriVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:56:13.079Z",
+              "WhenOpened": "2025-04-01T10:33:33.608Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fQuanLySV.cs",
+              "DocumentMoniker": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLySV.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLySV.cs",
+              "ToolTip": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLySV.cs",
+              "RelativeToolTip": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLySV.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAcwOQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T08:05:25.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "fQuanLyGiangVien.cs",
+              "DocumentMoniker": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyGiangVien.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyGiangVien.cs",
+              "ToolTip": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyGiangVien.cs",
+              "RelativeToolTip": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyGiangVien.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAqwL0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T07:19:46.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "fQuanLySV.cs [Design]",
               "DocumentMoniker": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLySV.cs",
               "RelativeDocumentMoniker": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLySV.cs",
               "ToolTip": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLySV.cs [Design]",
               "RelativeToolTip": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLySV.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:56:05.516Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "fQuanLyPhongHoc.cs [Design]",
-              "DocumentMoniker": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyPhongHoc.cs",
-              "RelativeDocumentMoniker": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyPhongHoc.cs",
-              "ToolTip": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyPhongHoc.cs [Design]",
-              "RelativeToolTip": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyPhongHoc.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:49:16.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "fQuanLyMonHoc.cs [Design]",
-              "DocumentMoniker": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyMonHoc.cs",
-              "RelativeDocumentMoniker": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyMonHoc.cs",
-              "ToolTip": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyMonHoc.cs [Design]",
-              "RelativeToolTip": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyMonHoc.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:36:07.197Z"
+              "WhenOpened": "2025-03-31T14:56:05.516Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -87,6 +96,17 @@
               "RelativeToolTip": "SinhVien\\Database.dbml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
               "WhenOpened": "2025-03-28T10:07:30.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fQuanLyMonHoc.cs [Design]",
+              "DocumentMoniker": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyMonHoc.cs",
+              "RelativeDocumentMoniker": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyMonHoc.cs",
+              "ToolTip": "D:\\WinForm\\StudentManagement\\SinhVien\\SinhVien\\GUI\\Quan Tri Vien\\fQuanLyMonHoc.cs [Design]",
+              "RelativeToolTip": "SinhVien\\GUI\\Quan Tri Vien\\fQuanLyMonHoc.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:36:07.197Z"
             }
           ]
         }

@@ -47,7 +47,7 @@
             // panel_main
             // 
             this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.panel_main.Location = new System.Drawing.Point(275, 0);
+            this.panel_main.Location = new System.Drawing.Point(275, -1);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1137, 743);
             this.panel_main.TabIndex = 12;
@@ -78,7 +78,7 @@
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(274, 743);
             this.guna2CustomGradientPanel1.TabIndex = 7;
@@ -112,7 +112,7 @@
             this.btnDangXuat.ImageSize = new System.Drawing.Size(40, 40);
             this.btnDangXuat.Location = new System.Drawing.Point(38, 687);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(116, 45);
+            this.btnDangXuat.Size = new System.Drawing.Size(190, 45);
             this.btnDangXuat.TabIndex = 0;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click_1);
@@ -141,7 +141,7 @@
             this.btnQuanLyLopHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyLopHoc.ImageSize = new System.Drawing.Size(40, 40);
             this.btnQuanLyLopHoc.Location = new System.Drawing.Point(40, 563);
-            this.btnQuanLyLopHoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuanLyLopHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnQuanLyLopHoc.Name = "btnQuanLyLopHoc";
             this.btnQuanLyLopHoc.Size = new System.Drawing.Size(210, 46);
             this.btnQuanLyLopHoc.TabIndex = 10;
@@ -174,7 +174,7 @@
             this.btnQuanLyMonHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyMonHoc.ImageSize = new System.Drawing.Size(40, 40);
             this.btnQuanLyMonHoc.Location = new System.Drawing.Point(40, 478);
-            this.btnQuanLyMonHoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuanLyMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnQuanLyMonHoc.Name = "btnQuanLyMonHoc";
             this.btnQuanLyMonHoc.Size = new System.Drawing.Size(210, 46);
             this.btnQuanLyMonHoc.TabIndex = 9;
@@ -207,7 +207,7 @@
             this.btnQuanLyGiangVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyGiangVien.ImageSize = new System.Drawing.Size(40, 40);
             this.btnQuanLyGiangVien.Location = new System.Drawing.Point(40, 394);
-            this.btnQuanLyGiangVien.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuanLyGiangVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnQuanLyGiangVien.Name = "btnQuanLyGiangVien";
             this.btnQuanLyGiangVien.Size = new System.Drawing.Size(210, 46);
             this.btnQuanLyGiangVien.TabIndex = 9;
@@ -240,7 +240,7 @@
             this.btnQuanLySinhVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLySinhVien.ImageSize = new System.Drawing.Size(40, 40);
             this.btnQuanLySinhVien.Location = new System.Drawing.Point(40, 309);
-            this.btnQuanLySinhVien.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuanLySinhVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnQuanLySinhVien.Name = "btnQuanLySinhVien";
             this.btnQuanLySinhVien.Size = new System.Drawing.Size(210, 46);
             this.btnQuanLySinhVien.TabIndex = 8;
@@ -274,7 +274,7 @@
             this.btnThongTinChung.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongTinChung.ImageSize = new System.Drawing.Size(40, 40);
             this.btnThongTinChung.Location = new System.Drawing.Point(40, 216);
-            this.btnThongTinChung.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThongTinChung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThongTinChung.Name = "btnThongTinChung";
             this.btnThongTinChung.Size = new System.Drawing.Size(210, 46);
             this.btnThongTinChung.TabIndex = 7;
@@ -287,13 +287,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1412, 744);
             this.ControlBox = false;
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.panel_main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fQuanTriVien";
             this.Text = "fQuanTriVien";
             this.Load += new System.EventHandler(this.fQuanTriVien_Load);

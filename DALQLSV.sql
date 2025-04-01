@@ -1,8 +1,26 @@
-﻿
+﻿USE master;
+GO
+ALTER DATABASE QuanLySinhVien SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+DROP DATABASE QuanLySinhVien;
+GO
+
+
 CREATE DATABASE QuanLySinhVien;
 GO
 USE QuanLySinhVien;
 GO
+
+
+-- Bảng tài khoản
+CREATE TABLE TaiKhoan (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    TenDangNhap NVARCHAR(50) UNIQUE NOT NULL,
+    MatKhau NVARCHAR(50) NOT NULL,
+    LoaiNguoiDung NVARCHAR(20) CHECK (LoaiNguoiDung IN ('SinhVien', 'GiangVien', 'Admin')) NOT NULL,
+    MaNguoiDung NVARCHAR(20) NOT NULL UNIQUE
+);
+go 
 
 -- Bảng Khoa
 CREATE TABLE dbo.Khoa
@@ -40,8 +58,7 @@ CREATE TABLE Thong_Tin_Sinh_Vien (
     DanToc NVARCHAR(10) NOT NULL,
     LopSV NVARCHAR(10) NOT NULL,
 	Photo IMAGE NULL,
-	MatKhau NVARCHAR(20) NULL
-	CONSTRAINT DF_Thong_Tin_Sinh_Vien_MatKhau DEFAULT '123456',
+	CONSTRAINT FK_ThongTinSinhVien_TaiKhoan FOREIGN KEY (MaSV) REFERENCES dbo.TaiKhoan(MaNguoiDung)
 );
 GO
 
@@ -92,7 +109,7 @@ GO
 -- Bảng Giảng Viên
 CREATE TABLE dbo.GiangVien
 (
-    MaGV		  INT PRIMARY KEY IDENTITY(1,1),  
+    MaGV		  NVARCHAR(20) PRIMARY KEY,  
     HoTen         NVARCHAR(50) NULL,
     GioiTinh      NVARCHAR(10) NULL,
     NgaySinh      DATE NOT NULL,
@@ -103,9 +120,8 @@ CREATE TABLE dbo.GiangVien
     CCCD		  NVARCHAR(20) NULL,
     DanToc		  NVARCHAR(20) NULL,
     NoiSinh		  NVARCHAR(50) NULL,
-	MatKhau		  NVARCHAR(20) NULL 
-	FOREIGN KEY (MaKhoa) REFERENCES dbo.Khoa(MaKhoa)
-	CONSTRAINT DF_Giang_Vien_MatKhau DEFAULT '123456',
+	FOREIGN KEY (MaKhoa) REFERENCES dbo.Khoa(MaKhoa),
+	CONSTRAINT FK_GiangVien_TaiKhoan FOREIGN KEY (MaGV) REFERENCES dbo.TaiKhoan(MaNguoiDung)
 );
 GO
 
@@ -116,7 +132,7 @@ CREATE TABLE dbo.PhongHoc
     MaPhong NVARCHAR(10) NOT NULL,
 	SucChua INT NOT NULL,
 	LoaiPhong NVARCHAR(50) NOT NULL,
-    GiangVienPhuTrach INT NOT NULL,
+    GiangVienPhuTrach NVARCHAR(20) NOT NULL,
 	TietBatDau INT NOT NULL, 
     TietKetThuc INT NOT NULL
 
@@ -127,7 +143,7 @@ GO
 
 -- Thông tin liên lạc giảng viên
 CREATE TABLE Thong_Tin_Lien_Lac_GV (
-    MaGV	INT PRIMARY KEY IDENTITY(1,1),
+    MaGV	NVARCHAR(20) PRIMARY KEY,
     QuocGia NVARCHAR(20) NULL,
     TinhThanh NVARCHAR(20) NULL,
     QuanHuyen NVARCHAR(20) NULL,
@@ -141,7 +157,7 @@ GO
 
 -- Bảng Thong_Tin_Nguoi_LH_GV
 CREATE TABLE Thong_Tin_Nguoi_LH_GV (
-    MaGV INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    MaGV NVARCHAR(20) PRIMARY KEY,
     HoTenLienHe NVARCHAR(10) NULL,
     DiaChiLienHe NVARCHAR(10) NULL,
     DienThoaiLienHe NVARCHAR(10) NULL,
@@ -188,16 +204,6 @@ create table dbo.Diem
 )
 go
 
--- Bảng tài khoản
-CREATE TABLE TaiKhoan (
-    Id INT IDENTITY(1,1) PRIMARY KEY,
-    TenDangNhap NVARCHAR(50) UNIQUE NOT NULL,
-    MatKhau NVARCHAR(50) NOT NULL,
-    LoaiNguoiDung NVARCHAR(20) CHECK (LoaiNguoiDung IN ('SinhVien', 'GiangVien', 'Admin')) NOT NULL,
-    MaNguoiDung NVARCHAR(20) NOT NULL
-);
-go 
-
 -- Thêm tài khoản admin
 INSERT INTO TaiKhoan (TenDangNhap, MatKhau, LoaiNguoiDung, MaNguoiDung)
 VALUES ('admin', 'admin', 'Admin', 'admin');
@@ -206,26 +212,35 @@ go
 -- Tạo Trigger cho sinh viên
 CREATE TRIGGER trg_InsertTaiKhoanSinhVien
 ON Thong_Tin_Sinh_Vien
-AFTER INSERT
+INSTEAD OF INSERT
 AS
 BEGIN
     INSERT INTO TaiKhoan (TenDangNhap, MatKhau, LoaiNguoiDung, MaNguoiDung)
-    SELECT i.MaSV + '@hcmute.sv', i.MaSV, 'SinhVien', 'sv' + i.MaSV
+    SELECT i.MaSV + '@hcmute.sv', i.MaSV, 'SinhVien', i.MaSV
+    FROM inserted i
+    WHERE NOT EXISTS (SELECT 1 FROM TaiKhoan t WHERE t.MaNguoiDung = i.MaSV);
+    INSERT INTO Thong_Tin_Sinh_Vien (MaSV, HoTen, NgaySinh, NoiSinh, GioiTinh, CCCD, DanToc, LopSV, Photo)
+    SELECT i.MaSV, i.HoTen, i.NgaySinh, i.NoiSinh, i.GioiTinh, i.CCCD, i.DanToc, i.LopSV, i.Photo
     FROM inserted i;
 END;
-go
+GO
 
 -- Tạo Trigger cho giảng viên
 CREATE TRIGGER trg_InsertTaiKhoanGiangVien
 ON GiangVien
-AFTER INSERT
+INSTEAD OF INSERT
 AS
 BEGIN
     INSERT INTO TaiKhoan (TenDangNhap, MatKhau, LoaiNguoiDung, MaNguoiDung)
-    SELECT 'gv'+ CONVERT(NVARCHAR(20), i.MaGV) + '@hcmute.gv', i.MaGV, 'GiangVien', 'gv'+ CONVERT(NVARCHAR(20), i.MaGV)
+    SELECT i.MaGV + '@hcmute.gv', i.MaGV, 'GiangVien', i.MaGV
+    FROM inserted i
+    WHERE NOT EXISTS (SELECT 1 FROM TaiKhoan t WHERE t.MaNguoiDung = i.MaGV);
+    INSERT INTO GiangVien (MaGV, HoTen, GioiTinh, NgaySinh, MaKhoa, DienThoai, Email, SoDienThoai, CCCD, DanToc, NoiSinh)
+    SELECT i.MaGV, i.HoTen, i.GioiTinh, i.NgaySinh, i.MaKhoa, i.DienThoai, i.Email, i.SoDienThoai, i.CCCD, i.DanToc, i.NoiSinh
     FROM inserted i;
 END;
-go
+GO
+
 
 
 INSERT INTO dbo.Khoa (MaKhoa, TenKhoa)
@@ -256,43 +271,44 @@ VALUES
     ('231261C', N'Thương mại 3', '231261')
 go
 
-INSERT INTO GiangVien (HoTen, GioiTinh,MaKhoa ,NgaySinh, DienThoai, Email, SoDienThoai, CCCD, DanToc, NoiSinh)
+INSERT INTO GiangVien (MaGV, HoTen, GioiTinh,MaKhoa ,NgaySinh, DienThoai, Email, SoDienThoai, CCCD, DanToc, NoiSinh)
 VALUES 
-(N'Trần Văn Hùng', N'Nam', '231101', '1985-03-15', '0987654321', 'vanhung@gmail.com', '0911111111', '123456789000', N'Kinh', N'Hà Nội'),
-(N'Lê Thị Hoa', N'Nữ', '231300', '1990-07-20', '0912345678', 'thihoa90@gmail.com', '0922222222', '223456789001', N'Kinh', N'Hải Phòng'),
-(N'Phạm Minh Đức', N'Nam', '231261', '1982-11-10', '0933456789', 'minhduc82@gmail.com', '0933333333', '323456789002', N'Tày', N'Lạng Sơn'),
-(N'Hoàng Thị Lan', N'Nữ', '231422', '1988-05-25', '0978567890', 'thilan88@gmail.com', '0944444444', '423456789003', N'Kinh', N'Đà Nẵng'),
-(N'Vũ Quang Trung', N'Nam', '231300', '1979-09-30', '0945678901', 'quangtrung@gmail.com', '0955555555', '523456789004', N'Kinh', N'Quảng Nam'),
-(N'Đỗ Thị Hương', N'Nữ', '231422', '1992-12-12', '0967891234', 'thihuong92@gmail.com', '0966666666', '623456789005', N'Tày', N'Cao Bằng'),
-(N'Bùi Văn Tâm', N'Nam', '231101', '1983-04-18', '0923456789', 'vantam83@gmail.com', '0977777777', '723456789006', N'Kinh', N'Hồ Chí Minh'),
-(N'Ngô Thị Yến', N'Nữ', '231261', '1986-08-08', '0956789012', 'thiyen86@gmail.com', '0988888888', '823456789007', N'Kinh', N'Bình Dương'),
-(N'Đặng Minh Phong', N'Nam', '231422', '1991-02-14', '0901234567', 'minhphong91@gmail.com', '0999999999', '923456789008', N'Kinh', N'Đồng Nai'),
-(N'Mai Thị Thảo', N'Nữ', '231101', '1989-06-22', '0998765432', 'thithao89@gmail.com', '0900000000', '103456789009', N'Thái', N'Sơn La');
+('GV001', N'Trần Văn Hùng', N'Nam', '231101', '1985-03-15', '0987654321', 'vanhung@gmail.com', '0911111111', '123456789000', N'Kinh', N'Hà Nội'),
+('GV002', N'Lê Thị Hoa', N'Nữ', '231300', '1990-07-20', '0912345678', 'thihoa90@gmail.com', '0922222222', '223456789001', N'Kinh', N'Hải Phòng'),
+('GV003', N'Phạm Minh Đức', N'Nam', '231261', '1982-11-10', '0933456789', 'minhduc82@gmail.com', '0933333333', '323456789002', N'Tày', N'Lạng Sơn'),
+('GV004', N'Hoàng Thị Lan', N'Nữ', '231422', '1988-05-25', '0978567890', 'thilan88@gmail.com', '0944444444', '423456789003', N'Kinh', N'Đà Nẵng'),
+('GV005', N'Vũ Quang Trung', N'Nam', '231300', '1979-09-30', '0945678901', 'quangtrung@gmail.com', '0955555555', '523456789004', N'Kinh', N'Quảng Nam'),
+('GV006', N'Đỗ Thị Hương', N'Nữ', '231422', '1992-12-12', '0967891234', 'thihuong92@gmail.com', '0966666666', '623456789005', N'Tày', N'Cao Bằng'),
+('GV007', N'Bùi Văn Tâm', N'Nam', '231141', '1983-04-18', '0923456789', 'vantam83@gmail.com', '0977777777', '723456789006', N'Kinh', N'Hồ Chí Minh'),
+('GV008', N'Ngô Thị Yến', N'Nữ', '231261', '1986-08-08', '0956789012', 'thiyen86@gmail.com', '0988888888', '823456789007', N'Kinh', N'Bình Dương'),
+('GV009', N'Đặng Minh Phong', N'Nam', '231422', '1991-02-14', '0901234567', 'minhphong91@gmail.com', '0999999999', '923456789008', N'Kinh', N'Đồng Nai'),
+('GV010', N'Mai Thị Thảo', N'Nữ', '231101', '1989-06-22', '0998765432', 'thithao89@gmail.com', '0900000000', '103456789009', N'Thái', N'Sơn La');
 go
 
 INSERT INTO dbo.PhongHoc (MaPhong, SucChua, LoaiPhong, GiangVienPhuTrach, TietBatDau, TietKetThuc) 
 VALUES
-(N'A101', 50, N'Phòng lý thuyết', 5, 1, 3),  
-(N'A102', 40, N'Phòng thực hành', 2, 4, 6), 
-(N'A103', 60, N'Phòng thực hành', 8, 7, 9),
-(N'B201', 45, N'Phòng lý thuyết', 1, 2, 4), 
-(N'B202', 30, N'Phòng thực hành', 7, 5, 7), 
-(N'B203', 55, N'Phòng lý thuyết', 3, 1, 2), 
-(N'C301', 35, N'Phòng thực hành', 9, 6, 8), 
-(N'C302', 50, N'Phòng lý thuyết', 4, 3, 5),
-(N'C303', 25, N'Phòng thực hành', 6, 8, 10), 
-(N'D101', 60, N'Phòng lý thuyết', 9, 1, 3), 
-(N'D102', 40, N'Phòng thực hành', 1, 4, 6),
-(N'D103', 45, N'Phòng lý thuyết', 7, 7, 9),
-(N'E201', 50, N'Phòng thực hành', 2, 2, 4),
-(N'E202', 30, N'Phòng lý thuyết', 9, 5, 7),
-(N'E203', 35, N'Phòng thực hành', 4, 1, 2),
-(N'F301', 60, N'Phòng lý thuyết', 8, 6, 8),
-(N'F302', 55, N'Phòng thực hành', 5, 3, 5),
-(N'F303', 40, N'Phòng lý thuyết', 6, 8, 10),
-(N'G401', 45, N'Phòng thực hành', 3, 1, 3),
-(N'G402', 50, N'Phòng lý thuyết', 10, 4, 6);
-go
+(N'A101', 50, N'Phòng lý thuyết', N'GV005', 1, 3),  
+(N'A102', 40, N'Phòng thực hành', N'GV002', 4, 6), 
+(N'A103', 60, N'Phòng thực hành', N'GV008', 7, 9),
+(N'B201', 45, N'Phòng lý thuyết', N'GV001', 2, 4), 
+(N'B202', 30, N'Phòng thực hành', N'GV007', 5, 7), 
+(N'B203', 55, N'Phòng lý thuyết', N'GV003', 1, 2), 
+(N'C301', 35, N'Phòng thực hành', N'GV009', 6, 8), 
+(N'C302', 50, N'Phòng lý thuyết', N'GV004', 3, 5),
+(N'C303', 25, N'Phòng thực hành', N'GV006', 8, 10), 
+(N'D101', 60, N'Phòng lý thuyết', N'GV009', 1, 3), 
+(N'D102', 40, N'Phòng thực hành', N'GV001', 4, 6),
+(N'D103', 45, N'Phòng lý thuyết', N'GV007', 7, 9),
+(N'E201', 50, N'Phòng thực hành', N'GV002', 2, 4),
+(N'E202', 30, N'Phòng lý thuyết', N'GV009', 5, 7),
+(N'E203', 35, N'Phòng thực hành', N'GV004', 1, 2),
+(N'F301', 60, N'Phòng lý thuyết', N'GV008', 6, 8),
+(N'F302', 55, N'Phòng thực hành', N'GV005', 3, 5),
+(N'F303', 40, N'Phòng lý thuyết', N'GV006', 8, 10),
+(N'G401', 45, N'Phòng thực hành', N'GV003', 1, 3),
+(N'G402', 50, N'Phòng lý thuyết', N'GV010', 4, 6);
+GO
+
 
 INSERT INTO dbo.MonHoc (MaMonHoc, TenMonHoc, SoTinChi, MaKhoa, SoTiet, LoaiMon)
 VALUES 
