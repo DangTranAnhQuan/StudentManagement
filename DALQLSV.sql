@@ -1,7 +1,41 @@
-﻿
+﻿USE master;
+GO
+ALTER DATABASE QuanLySinhVien SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+DROP DATABASE QuanLySinhVien;
+GO
 CREATE DATABASE QuanLySinhVien;
 GO
 USE QuanLySinhVien;
+GO
+
+
+-- Bảng tài khoản
+CREATE TABLE TaiKhoan (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    TenDangNhap NVARCHAR(50) UNIQUE NOT NULL,
+    MatKhau NVARCHAR(50) NOT NULL,
+    LoaiNguoiDung NVARCHAR(20) CHECK (LoaiNguoiDung IN ('SinhVien', 'GiangVien', 'Admin')) NOT NULL,
+    MaNguoiDung NVARCHAR(20) NOT NULL UNIQUE
+);
+go 
+-- Bảng tỉnh thành
+CREATE TABLE TinhThanh
+(
+    MaTinhThanh	INT NOT NULL PRIMARY KEY,
+    TenTinhThanh NVARCHAR(100) NOT NULL
+);
+GO
+
+CREATE TABLE QuanHuyen
+(
+    MaQuanHuyen INT NOT NULL PRIMARY KEY,
+    MaTinhThanh INT NOT NULL,
+    TenQuanHuyen NVARCHAR(100) NOT NULL, 
+    CONSTRAINT FK_QuanHuyen_TinhThanh
+        FOREIGN KEY (MaTinhThanh)
+        REFERENCES TinhThanh (MaTinhThanh)
+);
 GO
 
 -- Bảng Khoa
@@ -19,7 +53,6 @@ CREATE TABLE dbo.Lop
     MaLop       NVARCHAR(10) NOT NULL,
     TenLop      NVARCHAR(50) NOT NULL,
     MaKhoa      NVARCHAR(10) NULL, 
-
     CONSTRAINT PK_Lop PRIMARY KEY (MaLop),
     CONSTRAINT FK_Lop_Khoa
         FOREIGN KEY (MaKhoa)
@@ -28,6 +61,19 @@ CREATE TABLE dbo.Lop
         ON UPDATE CASCADE
 );
 GO
+
+-- Bảng Môn Học
+CREATE TABLE dbo.MonHoc
+(
+    MaMonHoc   NVARCHAR(10) NOT NULL PRIMARY KEY,
+    TenMonHoc  NVARCHAR(50) NOT NULL,
+    SoTinChi   INT		 NOT NULL,
+	MaKhoa NVARCHAR(10)     NOT NULL,
+	SoTiet INT NOT NULL,
+    LoaiMon NVARCHAR(50) NOT NULL,
+	CONSTRAINT FK_MonHoc_MaKhoa FOREIGN KEY (MaKhoa) REFERENCES dbo.Khoa(MaKhoa)
+);
+Go
 
 -- Bảng Thong_Tin_Sinh_Vien
 CREATE TABLE Thong_Tin_Sinh_Vien (
@@ -40,8 +86,7 @@ CREATE TABLE Thong_Tin_Sinh_Vien (
     DanToc NVARCHAR(10) NOT NULL,
     LopSV NVARCHAR(10) NOT NULL,
 	Photo IMAGE NULL,
-	MatKhau NVARCHAR(20) NULL
-	CONSTRAINT DF_Thong_Tin_Sinh_Vien_MatKhau DEFAULT '123456',
+	CONSTRAINT FK_ThongTinSinhVien_TaiKhoan FOREIGN KEY (MaSV) REFERENCES dbo.TaiKhoan(MaNguoiDung)
 );
 GO
 
@@ -49,41 +94,60 @@ GO
 CREATE TABLE Thong_Tin_Lien_Lac (
     MaSV NVARCHAR(20) PRIMARY KEY,
     QuocGia NVARCHAR(20) NULL,
-    TinhThanh NVARCHAR(20) NULL,
-    QuanHuyen NVARCHAR(20) NULL,
+    MaTinhThanh INT NULL,
+    MaQuanHuyen INT NULL,
     Phuong NVARCHAR(20) NULL,
-    DiaChi NVARCHAR(50) NULL,
+    SoNha NVARCHAR(20) NULL,
+    DiaChi NVARCHAR(200) NULL,
     DiDong NVARCHAR(20) NULL,
-    Email NVARCHAR(20) NULL,
-    FOREIGN KEY (MaSV) REFERENCES Thong_Tin_Sinh_Vien(MaSV)
+    Email NVARCHAR(30) NULL,
+    FOREIGN KEY (MaSV) REFERENCES Thong_Tin_Sinh_Vien(MaSV),
+    FOREIGN KEY (MaTinhThanh) REFERENCES TinhThanh(MaTinhThanh),
+    FOREIGN KEY (MaQuanHuyen) REFERENCES QuanHuyen(MaQuanHuyen)
 );
 GO
 
+ALTER TABLE Thong_Tin_Lien_Lac
+    ADD CONSTRAINT FK_TTL_TinhThanh
+    FOREIGN KEY (MaTinhThanh)
+    REFERENCES TinhThanh (MaTinhThanh);
+GO
+
+ALTER TABLE Thong_Tin_Lien_Lac
+    ADD CONSTRAINT FK_TTL_QuanHuyen
+    FOREIGN KEY (MaQuanHuyen)
+    REFERENCES QuanHuyen (MaQuanHuyen);
+GO
 -- Bảng Thong_Tin_Khoa_Hoc
 CREATE TABLE Thong_Tin_Khoa_Hoc (
     MaSV NVARCHAR(20) PRIMARY KEY,
-    KhoaHoc NVARCHAR(10) NOT NULL,
+    KhoaHoc NVARCHAR(20) NOT NULL,
     NgayNhapHoc DATE NOT NULL,
     LoaiHinhDaoTao NVARCHAR(20) NOT NULL,
     ChuongTrinhDaoTao NVARCHAR(20) NOT NULL,
     Khoa NVARCHAR(10) NOT NULL,
-    Nganh NVARCHAR(10) NOT NULL,
-    NienKhoa NVARCHAR(10) NOT NULL,
+    Nganh NVARCHAR(20) NOT NULL,
+    NienKhoa NVARCHAR(20) NOT NULL,
     FOREIGN KEY (MaSV) REFERENCES Thong_Tin_Sinh_Vien(MaSV)
 );
+GO
+
+ALTER TABLE Thong_Tin_Khoa_Hoc
+ADD CONSTRAINT FK_ThongTinKhoaHoc_Khoa
+FOREIGN KEY (Khoa) REFERENCES dbo.Khoa(MaKhoa);
 GO
 
 -- Bảng Thong_Tin_Nguoi_LH
 CREATE TABLE Thong_Tin_Nguoi_LH (
     Id INT PRIMARY KEY IDENTITY(1,1),
     MaSV NVARCHAR(20) NOT NULL,
-    HoTenLienHe NVARCHAR(10) NULL,
-    DiaChiLienHe NVARCHAR(10) NULL,
+    HoTenLienHe NVARCHAR(30) NULL,
+    DiaChiLienHe NVARCHAR(30) NULL,
     DienThoaiLienHe NVARCHAR(10) NULL,
-    HoTenCha NVARCHAR(10) NULL,
-    DienThoaiCha NVARCHAR(20) NULL,
-    HoTenMe NVARCHAR(10) NULL,
-    DienThoaiMe NVARCHAR(20) NULL,
+    HoTenCha NVARCHAR(30) NULL,
+    DienThoaiCha NVARCHAR(30) NULL,
+    HoTenMe NVARCHAR(30) NULL,
+    DienThoaiMe NVARCHAR(30) NULL,
     FOREIGN KEY (MaSV) REFERENCES Thong_Tin_Sinh_Vien(MaSV)
 );
 GO
@@ -92,7 +156,7 @@ GO
 -- Bảng Giảng Viên
 CREATE TABLE dbo.GiangVien
 (
-    MaGV		  INT PRIMARY KEY IDENTITY(1,1),  
+    MaGV		  NVARCHAR(20) PRIMARY KEY,  
     HoTen         NVARCHAR(50) NULL,
     GioiTinh      NVARCHAR(10) NULL,
     NgaySinh      DATE NOT NULL,
@@ -103,9 +167,8 @@ CREATE TABLE dbo.GiangVien
     CCCD		  NVARCHAR(20) NULL,
     DanToc		  NVARCHAR(20) NULL,
     NoiSinh		  NVARCHAR(50) NULL,
-	MatKhau		  NVARCHAR(20) NULL 
-	FOREIGN KEY (MaKhoa) REFERENCES dbo.Khoa(MaKhoa)
-	CONSTRAINT DF_Giang_Vien_MatKhau DEFAULT '123456',
+	FOREIGN KEY (MaKhoa) REFERENCES dbo.Khoa(MaKhoa),
+	CONSTRAINT FK_GiangVien_TaiKhoan FOREIGN KEY (MaGV) REFERENCES dbo.TaiKhoan(MaNguoiDung)
 );
 GO
 
@@ -113,26 +176,28 @@ GO
 -- Bảng Phòng học
 CREATE TABLE dbo.PhongHoc
 (
-    MaPhong NVARCHAR(10) NOT NULL,
-	SucChua INT NOT NULL,
-	LoaiPhong NVARCHAR(50) NOT NULL,
-    GiangVienPhuTrach INT NOT NULL,
-	TietBatDau INT NOT NULL, 
-    TietKetThuc INT NOT NULL
-
-	PRIMARY KEY (MaPhong, TietBatDau, TietKetThuc)
-	FOREIGN KEY (GiangVienPhuTrach) REFERENCES GiangVien(MaGV)
+    MaPhong            NVARCHAR(10)  NOT NULL,
+    LoaiPhong          NVARCHAR(50)  NOT NULL,
+    SucChua            INT           NOT NULL,
+    GiangVienPhuTrach  NVARCHAR(20)  NOT NULL,
+    TietBatDau         INT           NOT NULL, 
+    TietKetThuc        INT           NOT NULL,
+    CONSTRAINT PK_PhongHoc PRIMARY KEY (MaPhong, TietBatDau, TietKetThuc),
+    CONSTRAINT FK_PhongHoc_GiangVien FOREIGN KEY (GiangVienPhuTrach)
+        REFERENCES dbo.GiangVien(MaGV)
+        ON UPDATE CASCADE
+        ON DELETE NO ACTION
 );
 GO
 
 -- Thông tin liên lạc giảng viên
 CREATE TABLE Thong_Tin_Lien_Lac_GV (
-    MaGV	INT PRIMARY KEY IDENTITY(1,1),
+    MaGV	NVARCHAR(20) PRIMARY KEY,
     QuocGia NVARCHAR(20) NULL,
     TinhThanh NVARCHAR(20) NULL,
     QuanHuyen NVARCHAR(20) NULL,
     Phuong NVARCHAR(20) NULL,
-    DiaChi NVARCHAR(50) NULL,
+    DiaChi NVARCHAR(100) NULL,
     DiDong NVARCHAR(20) NULL,
     Email NVARCHAR(20) NULL,
     FOREIGN KEY (MaGV) REFERENCES GiangVien(MaGV)
@@ -141,7 +206,7 @@ GO
 
 -- Bảng Thong_Tin_Nguoi_LH_GV
 CREATE TABLE Thong_Tin_Nguoi_LH_GV (
-    MaGV INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    MaGV NVARCHAR(20) PRIMARY KEY,
     HoTenLienHe NVARCHAR(10) NULL,
     DiaChiLienHe NVARCHAR(10) NULL,
     DienThoaiLienHe NVARCHAR(10) NULL,
@@ -158,45 +223,64 @@ ON DELETE NO ACTION
 ON UPDATE CASCADE;
 GO
 
--- Bảng Môn Học
-CREATE TABLE dbo.MonHoc
+-- Bảng điểm
+CREATE TABLE dbo.Diem
 (
-    MaMonHoc   NVARCHAR(10) NOT NULL PRIMARY KEY,
-    TenMonHoc  NVARCHAR(50) NOT NULL,
-    SoTinChi   INT		 NOT NULL,
-	MaKhoa NVARCHAR(10)     NOT NULL,
-	SoTiet INT NOT NULL,
-    LoaiMon NVARCHAR(50) NOT NULL
-	CONSTRAINT FK_MonHoc_MaKhoa FOREIGN KEY (MaKhoa) REFERENCES dbo.Khoa(MaKhoa)
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    MaSV NVARCHAR(20) NOT NULL,
+    MaMonHoc NVARCHAR(10) NOT NULL,
+    PhanTramTrenLop INT DEFAULT 0,
+    PhanTramThi INT DEFAULT 0,
+    DiemTrenLop FLOAT DEFAULT 0,
+    DiemThi FLOAT DEFAULT 0,
+    DiemTB AS ((PhanTramTrenLop * DiemTrenLop + PhanTramThi * DiemThi) / (PhanTramTrenLop + PhanTramThi)),
+    Loai AS (
+         CASE 
+             WHEN ((PhanTramTrenLop * DiemTrenLop + PhanTramThi * DiemThi) / (PhanTramTrenLop + PhanTramThi)) >= 8.5 THEN N'A'
+			 WHEN ((PhanTramTrenLop * DiemTrenLop + PhanTramThi * DiemThi) / (PhanTramTrenLop + PhanTramThi)) >= 8.0 THEN N'B+'
+             WHEN ((PhanTramTrenLop * DiemTrenLop + PhanTramThi * DiemThi) / (PhanTramTrenLop + PhanTramThi)) >= 7.0 THEN N'B'
+			 WHEN ((PhanTramTrenLop * DiemTrenLop + PhanTramThi * DiemThi) / (PhanTramTrenLop + PhanTramThi)) >= 6.5 THEN N'C+'
+             WHEN ((PhanTramTrenLop * DiemTrenLop + PhanTramThi * DiemThi) / (PhanTramTrenLop + PhanTramThi)) >= 5.5 THEN N'C'
+             WHEN ((PhanTramTrenLop * DiemTrenLop + PhanTramThi * DiemThi) / (PhanTramTrenLop + PhanTramThi)) >= 4.0 THEN N'Trung Bình'
+             ELSE N'F'
+         END
+    ),
+    FOREIGN KEY (MaSV) REFERENCES dbo.Thong_Tin_Sinh_Vien(MaSV),
+    FOREIGN KEY (MaMonHoc) REFERENCES dbo.MonHoc(MaMonHoc)
 );
 GO
 
--- Bảng Điểm
-create table dbo.Diem
+-- Bảng HocPhan
+CREATE TABLE dbo.HocPhan
 (
-    Id int identity(1,1) primary key,
-    MaSV NVARCHAR(20) not null,
-    MaMonHoc NVARCHAR(10) not null,
-    PhanTramTrenLop int default 0,
-    PhanTramThi int default 0,
-    DiemTrenLop float default 0,
-    DiemThi float default 0,
-    DiemTB float default 0,
-    Loai char(1) default 'F',
-    foreign key (MaSV) references Thong_Tin_Sinh_Vien(MaSV),
-    foreign key (MaMonHoc) references MonHoc(MaMonHoc)
-)
-go
-
--- Bảng tài khoản
-CREATE TABLE TaiKhoan (
-    Id INT IDENTITY(1,1) PRIMARY KEY,
-    TenDangNhap NVARCHAR(50) UNIQUE NOT NULL,
-    MatKhau NVARCHAR(50) NOT NULL,
-    LoaiNguoiDung NVARCHAR(20) CHECK (LoaiNguoiDung IN ('SinhVien', 'GiangVien', 'Admin')) NOT NULL,
-    MaNguoiDung NVARCHAR(20) NOT NULL
+    MaHocPhan     NVARCHAR(15)   NOT NULL PRIMARY KEY,
+    MaMonHoc      NVARCHAR(10)   NOT NULL,
+    MaGV          NVARCHAR(20)   NOT NULL,
+    MaPhong       NVARCHAR(10)   NOT NULL,
+    SiSoToiDa     INT            NOT NULL,
+    TietBatDau    INT            NOT NULL,
+    TietKetThuc   INT            NOT NULL,
+    CONSTRAINT FK_HocPhan_MonHoc   FOREIGN KEY (MaMonHoc) REFERENCES dbo.MonHoc(MaMonHoc),
+    CONSTRAINT FK_HocPhan_GiangVien FOREIGN KEY (MaGV)     REFERENCES dbo.GiangVien(MaGV),
+    CONSTRAINT FK_HocPhan_PhongHoc  FOREIGN KEY (MaPhong, TietBatDau, TietKetThuc)
+        REFERENCES dbo.PhongHoc(MaPhong, TietBatDau, TietKetThuc)
+        ON UPDATE CASCADE
+        ON DELETE NO ACTION
 );
-go 
+GO
+-- Đăng ký học
+CREATE TABLE dbo.DangKyHoc
+(
+    MaSV         NVARCHAR(20)   NOT NULL,
+    MaHocPhan    NVARCHAR(15)   NOT NULL,
+    NgayDK       DATETIME       NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT PK_DangKyHoc PRIMARY KEY (MaSV, MaHocPhan),
+    CONSTRAINT FK_DangKyHoc_SV       FOREIGN KEY (MaSV)      REFERENCES dbo.Thong_Tin_Sinh_Vien(MaSV),
+    CONSTRAINT FK_DangKyHoc_HocPhan  FOREIGN KEY (MaHocPhan) REFERENCES dbo.HocPhan(MaHocPhan)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+);
+GO
 
 -- Thêm tài khoản admin
 INSERT INTO TaiKhoan (TenDangNhap, MatKhau, LoaiNguoiDung, MaNguoiDung)
@@ -206,138 +290,32 @@ go
 -- Tạo Trigger cho sinh viên
 CREATE TRIGGER trg_InsertTaiKhoanSinhVien
 ON Thong_Tin_Sinh_Vien
-AFTER INSERT
+INSTEAD OF INSERT
 AS
 BEGIN
     INSERT INTO TaiKhoan (TenDangNhap, MatKhau, LoaiNguoiDung, MaNguoiDung)
-    SELECT i.MaSV + '@hcmute.sv', i.MaSV, 'SinhVien', 'sv' + i.MaSV
+    SELECT i.MaSV + '@hcmute.sv', i.MaSV, 'SinhVien', i.MaSV
+    FROM inserted i
+    WHERE NOT EXISTS (SELECT 1 FROM TaiKhoan t WHERE t.MaNguoiDung = i.MaSV);
+    INSERT INTO Thong_Tin_Sinh_Vien (MaSV, HoTen, NgaySinh, NoiSinh, GioiTinh, CCCD, DanToc, LopSV, Photo)
+    SELECT i.MaSV, i.HoTen, i.NgaySinh, i.NoiSinh, i.GioiTinh, i.CCCD, i.DanToc, i.LopSV, i.Photo
     FROM inserted i;
 END;
-go
+GO
 
 -- Tạo Trigger cho giảng viên
 CREATE TRIGGER trg_InsertTaiKhoanGiangVien
 ON GiangVien
-AFTER INSERT
+INSTEAD OF INSERT
 AS
 BEGIN
     INSERT INTO TaiKhoan (TenDangNhap, MatKhau, LoaiNguoiDung, MaNguoiDung)
-    SELECT 'gv'+ CONVERT(NVARCHAR(20), i.MaGV) + '@hcmute.gv', i.MaGV, 'GiangVien', 'gv'+ CONVERT(NVARCHAR(20), i.MaGV)
+    SELECT i.MaGV + '@hcmute.gv', i.MaGV, 'GiangVien', i.MaGV
+    FROM inserted i
+    WHERE NOT EXISTS (SELECT 1 FROM TaiKhoan t WHERE t.MaNguoiDung = i.MaGV);
+    INSERT INTO GiangVien (MaGV, HoTen, GioiTinh, NgaySinh, MaKhoa, DienThoai, Email, SoDienThoai, CCCD, DanToc, NoiSinh)
+    SELECT i.MaGV, i.HoTen, i.GioiTinh, i.NgaySinh, i.MaKhoa, i.DienThoai, i.Email, i.SoDienThoai, i.CCCD, i.DanToc, i.NoiSinh
     FROM inserted i;
 END;
-go
+GO
 
-
-INSERT INTO dbo.Khoa (MaKhoa, TenKhoa)
-VALUES 
-    ('231101', N'Công nghệ thông tin'),   
-    ('231141', N'Cơ khí Chế Tạo Máy'),      
-    ('231422', N'Điện - Điện tử'),         
-    ('231300', N'Khoa học ứng dụng'),       
-    ('231261', N'Thương mại điện tử')      
-go
-
-INSERT INTO dbo.Lop (MaLop, TenLop, MaKhoa)
-VALUES 
-    ('231101A', N'IT1', '231101'),
-    ('231101B', N'IT2', '231101'),
-    ('231101C', N'IT3', '231101'),
-    ('231141A', N'Cơ khí 2', '231141'),
-    ('231141B', N'Cơ khí 2', '231141'),
-    ('231141C', N'Cơ khí 3', '231141'),
-    ('231422A', N'Điện 1', '231422'),
-    ('231422B', N'Điện 2', '231422'),
-    ('231422C', N'Điện 3', '231422'),
-    ('231300A', N'Khoa học 1', '231300'),
-    ('231300B', N'Khoa học 2', '231300'),
-    ('231300C', N'Khoa học 3', '231300'),
-    ('231261A', N'Thương mại 1', '231261'),
-    ('231261B', N'Thương mại 2', '231261'),
-    ('231261C', N'Thương mại 3', '231261')
-go
-
-INSERT INTO GiangVien (HoTen, GioiTinh,MaKhoa ,NgaySinh, DienThoai, Email, SoDienThoai, CCCD, DanToc, NoiSinh)
-VALUES 
-(N'Trần Văn Hùng', N'Nam', '231101', '1985-03-15', '0987654321', 'vanhung@gmail.com', '0911111111', '123456789000', N'Kinh', N'Hà Nội'),
-(N'Lê Thị Hoa', N'Nữ', '231300', '1990-07-20', '0912345678', 'thihoa90@gmail.com', '0922222222', '223456789001', N'Kinh', N'Hải Phòng'),
-(N'Phạm Minh Đức', N'Nam', '231261', '1982-11-10', '0933456789', 'minhduc82@gmail.com', '0933333333', '323456789002', N'Tày', N'Lạng Sơn'),
-(N'Hoàng Thị Lan', N'Nữ', '231422', '1988-05-25', '0978567890', 'thilan88@gmail.com', '0944444444', '423456789003', N'Kinh', N'Đà Nẵng'),
-(N'Vũ Quang Trung', N'Nam', '231300', '1979-09-30', '0945678901', 'quangtrung@gmail.com', '0955555555', '523456789004', N'Kinh', N'Quảng Nam'),
-(N'Đỗ Thị Hương', N'Nữ', '231422', '1992-12-12', '0967891234', 'thihuong92@gmail.com', '0966666666', '623456789005', N'Tày', N'Cao Bằng'),
-(N'Bùi Văn Tâm', N'Nam', '231101', '1983-04-18', '0923456789', 'vantam83@gmail.com', '0977777777', '723456789006', N'Kinh', N'Hồ Chí Minh'),
-(N'Ngô Thị Yến', N'Nữ', '231261', '1986-08-08', '0956789012', 'thiyen86@gmail.com', '0988888888', '823456789007', N'Kinh', N'Bình Dương'),
-(N'Đặng Minh Phong', N'Nam', '231422', '1991-02-14', '0901234567', 'minhphong91@gmail.com', '0999999999', '923456789008', N'Kinh', N'Đồng Nai'),
-(N'Mai Thị Thảo', N'Nữ', '231101', '1989-06-22', '0998765432', 'thithao89@gmail.com', '0900000000', '103456789009', N'Thái', N'Sơn La');
-go
-
-INSERT INTO dbo.PhongHoc (MaPhong, SucChua, LoaiPhong, GiangVienPhuTrach, TietBatDau, TietKetThuc) 
-VALUES
-(N'A101', 50, N'Phòng lý thuyết', 5, 1, 3),  
-(N'A102', 40, N'Phòng thực hành', 2, 4, 6), 
-(N'A103', 60, N'Phòng thực hành', 8, 7, 9),
-(N'B201', 45, N'Phòng lý thuyết', 1, 2, 4), 
-(N'B202', 30, N'Phòng thực hành', 7, 5, 7), 
-(N'B203', 55, N'Phòng lý thuyết', 3, 1, 2), 
-(N'C301', 35, N'Phòng thực hành', 9, 6, 8), 
-(N'C302', 50, N'Phòng lý thuyết', 4, 3, 5),
-(N'C303', 25, N'Phòng thực hành', 6, 8, 10), 
-(N'D101', 60, N'Phòng lý thuyết', 9, 1, 3), 
-(N'D102', 40, N'Phòng thực hành', 1, 4, 6),
-(N'D103', 45, N'Phòng lý thuyết', 7, 7, 9),
-(N'E201', 50, N'Phòng thực hành', 2, 2, 4),
-(N'E202', 30, N'Phòng lý thuyết', 9, 5, 7),
-(N'E203', 35, N'Phòng thực hành', 4, 1, 2),
-(N'F301', 60, N'Phòng lý thuyết', 8, 6, 8),
-(N'F302', 55, N'Phòng thực hành', 5, 3, 5),
-(N'F303', 40, N'Phòng lý thuyết', 6, 8, 10),
-(N'G401', 45, N'Phòng thực hành', 3, 1, 3),
-(N'G402', 50, N'Phòng lý thuyết', 10, 4, 6);
-go
-
-INSERT INTO dbo.MonHoc (MaMonHoc, TenMonHoc, SoTinChi, MaKhoa, SoTiet, LoaiMon)
-VALUES 
-    ('MH011', N'Lập trình Java', 3, '231101', 45, N'Chuyên ngành'),
-    ('MH012', N'Cơ sở dữ liệu', 4, '231101', 60, N'Chuyên ngành'),
-    ('MH013', N'Mạng máy tính', 3, '231101', 45, N'Chuyên ngành'),
-    ('MH014', N'Trí tuệ nhân tạo', 4, '231101', 60, N'Tự chọn'),
-    ('MH015', N'Phân tích thiết kế hệ thống', 3, '231101', 45, N'Chuyên ngành'),
-	('MH016', N'Cơ học ứng dụng', 3, '231141', 45, N'Cơ sở ngành'),
-    ('MH017', N'Thiết kế máy', 4, '231141', 60, N'Chuyên ngành'),
-    ('MH018', N'Vật liệu cơ khí', 3, '231141', 45, N'Cơ sở ngành'),
-    ('MH019', N'Công nghệ chế tạo', 4, '231141', 60, N'Chuyên ngành'),
-    ('MH020', N'Điều khiển tự động', 3, '231141', 45, N'Tự chọn'),
-	('MH021', N'Điện tử công suất', 3, '231422', 45, N'Chuyên ngành'),
-    ('MH022', N'Vi điều khiển', 4, '231422', 60, N'Chuyên ngành'),
-    ('MH023', N'Kỹ thuật số', 3, '231422', 45, N'Cơ sở ngành'),
-    ('MH024', N'Truyền động điện', 4, '231422', 60, N'Chuyên ngành'),
-    ('MH025', N'Điện tử tương tự', 3, '231422', 45, N'Cơ sở ngành'),
-	('MH026', N'Toán ứng dụng', 3, '231300', 45, N'Đại cương'),
-    ('MH027', N'Vật lý ứng dụng', 4, '231300', 60, N'Đại cương'),
-    ('MH028', N'Hóa học ứng dụng', 3, '231300', 45, N'Đại cương'),
-    ('MH029', N'Sinh học ứng dụng', 4, '231300', 60, N'Đại cương'),
-    ('MH030', N'Khoa học môi trường', 3, '231300', 45, N'Tự chọn'),
-	('MH031', N'Marketing điện tử', 3, '231261', 45, N'Chuyên ngành'),
-    ('MH032', N'Thương mại quốc tế', 4, '231261', 60, N'Chuyên ngành'),
-    ('MH033', N'Quản lý chuỗi cung ứng', 3, '231261', 45, N'Chuyên ngành'),
-    ('MH034', N'Tài chính điện tử', 4, '231261', 60, N'Tự chọn'),
-    ('MH035', N'Luật thương mại điện tử', 3, '231261', 45, N'Chuyên ngành')
-go
-
-INSERT INTO Thong_Tin_Sinh_Vien (MaSV, HoTen, NgaySinh, GioiTinh, CCCD, DanToc, LopSV, NoiSinh)
-VALUES 
-('23110101', N'Nguyễn Văn An', '2003-05-12', N'Nam', '012345678901', N'Kinh', '231101A', N'Hà Nội'),
-('23110102', N'Trần Thị Bình', '2002-08-20', N'Nữ', '023456789012', N'Kinh', '231101B', N'Hồ Chí Minh'),
-('23110103', N'Lê Minh Châu', '2004-01-15', N'Nữ', '034567890123', N'Tày', '231101C', N'Lạng Sơn'),
-('23114101', N'Phạm Quốc Dũng', '2003-11-30', N'Nam', '045678901234', N'Kinh', '231141A', N'Đà Nẵng'),
-('23114102', N'Hoàng Thị Ngọc', '2001-07-25', N'Nữ', '056789012345', N'Kinh', '231141B', N'Quảng Nam'),
-('23114103', N'Vũ Văn Hùng', '2004-03-10', N'Nam', '067890123456', N'Thái', '231141C', N'Điện Biên'),
-('23126101', N'Đỗ Thị Lan', '2002-09-05', N'Nữ', '078901234567', N'Kinh', '231261A', N'Hải Phòng'),
-('23126102', N'Bùi Minh Khang', '2003-02-18', N'Nam', '089012345678', N'Kinh', '231261B', N'Bắc Giang'),
-('23126103', N'Ngô Thị Mai', '2004-06-22', N'Nữ', '090123456789', N'Tày', '231261C', N'Cao Bằng'),
-('23130001', N'Đặng Văn Nam', '2001-12-01', N'Nam', '101234567890', N'Kinh', '231300A', N'Nghệ An'),
-('23130002', N'Mai Thị Hồng', '2003-04-15', N'Nữ', '112345678901', N'Kinh', '231300B', N'Thanh Hóa'),
-('23130003', N'Trần Quốc Phong', '2002-10-10', N'Nam', '123456789012', N'Thái', '231300C', N'Sơn La'),
-('23142201', N'Lê Thị Thanh', '2004-07-07', N'Nữ', '134567890123', N'Kinh', '231422A', N'Bình Dương'),
-('23142202', N'Phạm Văn Tùng', '2003-03-25', N'Nam', '145678901234', N'Kinh', '231422B', N'Đồng Nai'),
-('23142203', N'Hoàng Thị Yến', '2002-11-11', N'Nữ', '156789012345', N'Tày', '231422C', N'Bắc Kạn')
-go

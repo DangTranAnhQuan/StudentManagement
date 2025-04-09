@@ -19,9 +19,7 @@ C:\StudentManagement\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.exe
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.pdb
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\bin\Debug\Guna.UI2.dll
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.AssemblyReference.cache
-C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fCapNhatThongTinSV.resources
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\QuanLySinhVien.fDangNhap.resources
-C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fThongTinSV.resources
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.Properties.Resources.resources
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.GenerateResource.cache
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.CoreCompileInputs.cache
@@ -29,7 +27,6 @@ C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.cspr
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.exe
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.pdb
 C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fGiangVien.resources
-C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.temp.resources
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\bin\Debug\GUI\fDangNhap.resx
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.exe.config
 D:\WinForm\Do an\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.exe
@@ -80,3 +77,55 @@ D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_V
 D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLySV.resources
 D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyMonHoc.resources
 D:\WinForm\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyPhongHoc.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\bin\Debug\GUI\fDangNhap.resx
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.exe.config
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.exe
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\bin\Debug\SinhVien.pdb
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\bin\Debug\Guna.UI2.dll
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.AssemblyReference.cache
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fCapNhatThongTinGV.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\QuanLySinhVien.fDangNhap.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fGiangVien.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLyDiem.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyGiangVien.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyPhongHoc.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyMonHoc.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLySV.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanTriVien.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTaiKhoan.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fThongTinCaNhan.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLySinhVien.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fThongTinChung.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.Properties.Resources.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.GenerateResource.cache
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.CoreCompileInputs.cache
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.csproj.Up2Date
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.exe
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.pdb
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fCapNhatThongTinSinhVien.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fDanhSachMonHoc.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fSinhVien.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fThongTinSinhVien.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.sinhvien.fXemDiem.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fCapNhatThongTinGV.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLyDiem.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fCapNhatThongTinSinhVien.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fDanhSachMonHoc.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fSinhVien.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fTaiKhoanSV.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fThongTinSinhVien.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyGiangVien.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyPhongHoc.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLyMonHoc.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fQuanLySV.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanTriVien.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fTaiKhoan.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fThongTinCaNhan.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fQuanLySinhVien.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.Quan_Tri_Vien.fThongTinChung.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.sinhvien.fXemDiem.resources
+C:\StudentManagement\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fLoading.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.fLoading.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.sinhvien.fDangKyHocPhan.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.fTaiKhoanSV.resources
+C:\Users\ducdu\OneDrive\Máy tính\C#\StudentManagement\SinhVien\SinhVien\obj\Debug\SinhVien.GUI.sinhvien.fDoiMatKhau.resources

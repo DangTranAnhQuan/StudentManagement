@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLySinhVien;
+using SinhVien.GUI;
 
 namespace SinhVien
 {
@@ -17,6 +18,10 @@ namespace SinhVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            fLoading loadingForm = new fLoading();
+            loadingForm.ShowDialog();
+
             Application.Run(new fDangNhap());
         }
     }

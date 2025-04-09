@@ -47,7 +47,7 @@
             // panel_main
             // 
             this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.panel_main.Location = new System.Drawing.Point(275, 0);
+            this.panel_main.Location = new System.Drawing.Point(275, -1);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1137, 743);
             this.panel_main.TabIndex = 12;
@@ -55,7 +55,7 @@
             // imgSlide
             // 
             this.imgSlide.Image = ((System.Drawing.Image)(resources.GetObject("imgSlide.Image")));
-            this.imgSlide.Location = new System.Drawing.Point(209, 113);
+            this.imgSlide.Location = new System.Drawing.Point(209, 114);
             this.imgSlide.Name = "imgSlide";
             this.imgSlide.Size = new System.Drawing.Size(65, 213);
             this.imgSlide.TabIndex = 0;
@@ -112,7 +112,7 @@
             this.btnDangXuat.ImageSize = new System.Drawing.Size(40, 40);
             this.btnDangXuat.Location = new System.Drawing.Point(38, 687);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(116, 45);
+            this.btnDangXuat.Size = new System.Drawing.Size(190, 45);
             this.btnDangXuat.TabIndex = 0;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click_1);
@@ -287,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1412, 744);
             this.ControlBox = false;
             this.Controls.Add(this.guna2CustomGradientPanel1);

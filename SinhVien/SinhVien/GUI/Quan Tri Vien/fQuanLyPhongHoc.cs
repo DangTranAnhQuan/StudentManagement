@@ -62,7 +62,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
         private void LoadGiangVien()
         {
             var dsgv = db.GiangViens.Select(gv => new { gv.MaGV, gv.HoTen }).ToList();
-            dsgv.Insert(0, new { MaGV = 0, HoTen = "Giảng viên phụ trách"});
+            dsgv.Insert(0, new { MaGV = "0", HoTen = "Giảng viên phụ trách"});
             cbbGiangVien.DataSource = dsgv;
             cbbLocGiangVien.DataSource = new BindingSource(dsgv, null);
             cbbGiangVien.DisplayMember = cbbLocGiangVien.DisplayMember = "HoTen";
@@ -200,7 +200,7 @@ namespace SinhVien.GUI.Quan_Tri_Vien
             PhongHoc ph = new PhongHoc();
             ph.MaPhong = txtMaPhongHoc.Text;
             ph.SucChua = Convert.ToInt32(txtSucChua.Text);
-            ph.GiangVienPhuTrach = Convert.ToInt32(cbbGiangVien.SelectedValue);
+            ph.GiangVienPhuTrach = cbbGiangVien.SelectedValue.ToString();
             ph.LoaiPhong = cbbLoaiPhong.Text;
             ph.TietBatDau = cbbTietBatDau.SelectedIndex;
             ph.TietKetThuc = cbbTietKetThuc.SelectedIndex;

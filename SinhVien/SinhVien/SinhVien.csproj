@@ -60,6 +60,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database.dbml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLoading.Designer.cs">
+      <DependentUpon>fLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GiangVien\fCapNhatThongTinGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,48 @@
     </Compile>
     <Compile Include="GUI\GiangVien\fQuanLyDiem.Designer.cs">
       <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fCapNhatThongTinSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fCapNhatThongTinSinhVien.Designer.cs">
+      <DependentUpon>fCapNhatThongTinSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fDangKyHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fDangKyHocPhan.Designer.cs">
+      <DependentUpon>fDangKyHocPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fDanhSachMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fDanhSachMonHoc.Designer.cs">
+      <DependentUpon>fDanhSachMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fSinhVien.Designer.cs">
+      <DependentUpon>fSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fTaiKhoanSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fTaiKhoanSV.Designer.cs">
+      <DependentUpon>fTaiKhoanSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fThongTinSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\sinhvien\fThongTinSinhVien.Designer.cs">
+      <DependentUpon>fThongTinSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Quan Tri Vien\fQuanLyGiangVien.cs">
       <SubType>Form</SubType>
@@ -126,18 +174,6 @@
     <Compile Include="GUI\GiangVien\fThongTinCaNhan.Designer.cs">
       <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fThongTinSV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\fThongTinSV.Designer.cs">
-      <DependentUpon>fThongTinSV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\fCapNhatThongTinSV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\fCapNhatThongTinSV.Designer.cs">
-      <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\GiangVien\fQuanLySinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,20 +186,20 @@
     <Compile Include="GUI\Quan Tri Vien\fThongTinChung.Designer.cs">
       <DependentUpon>fThongTinChung.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\temp.cs">
+    <Compile Include="GUI\sinhvien\fXemDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\temp.Designer.cs">
-      <DependentUpon>temp.cs</DependentUpon>
+    <Compile Include="GUI\sinhvien\fXemDiem.Designer.cs">
+      <DependentUpon>fXemDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\fLoading.resx">
+      <DependentUpon>fLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\fCapNhatThongTinGV.resx">
       <DependentUpon>fCapNhatThongTinGV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fCapNhatThongTinSV.resx">
-      <DependentUpon>fCapNhatThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
@@ -174,6 +210,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\fQuanLyDiem.resx">
       <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\sinhvien\fCapNhatThongTinSinhVien.resx">
+      <DependentUpon>fCapNhatThongTinSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\sinhvien\fDangKyHocPhan.resx">
+      <DependentUpon>fDangKyHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\sinhvien\fDanhSachMonHoc.resx">
+      <DependentUpon>fDanhSachMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\sinhvien\fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\sinhvien\fSinhVien.resx">
+      <DependentUpon>fSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\sinhvien\fTaiKhoanSV.resx">
+      <DependentUpon>fTaiKhoanSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\sinhvien\fThongTinSinhVien.resx">
+      <DependentUpon>fThongTinSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Quan Tri Vien\fQuanLyGiangVien.resx">
       <DependentUpon>fQuanLyGiangVien.cs</DependentUpon>
@@ -196,17 +253,14 @@
     <EmbeddedResource Include="GUI\GiangVien\fThongTinCaNhan.resx">
       <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fThongTinSV.resx">
-      <DependentUpon>fThongTinSV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\fQuanLySinhVien.resx">
       <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Quan Tri Vien\fThongTinChung.resx">
       <DependentUpon>fThongTinChung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\temp.resx">
-      <DependentUpon>temp.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\sinhvien\fXemDiem.resx">
+      <DependentUpon>fXemDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
